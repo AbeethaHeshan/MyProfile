@@ -8,47 +8,44 @@
         /*section 1*/
         section {
             position: relative;
-            border: 2px solid red;
             height: 100vh;
 
         }
 
-        /*main middle 2 circles*/
-        .Outer_Circle {
+        /*main middle 2 circles (fixed)*/
 
+        .inner_Outer_circles{
             position: fixed;
             border-radius: 50%;
+            background: transparent;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            z-index: 2;
+        }
+
+        #Outer {
+
             width: 230px;
             height: 230px;
             background: transparent;
             border: 15px solid #BA9785;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            margin: auto;
-            z-index: 2;
-
 
         }
 
-        .Inner_Circle {
-            position: fixed;
-            border-radius: 50%;
+        #Inner{
+
             width: 198px;
             height: 198px;
             background: transparent;
             border: 18px solid #E51500;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            margin: auto;
-            z-index: 2;
+
         }
 
         /*circles*/
-        .circle{
+        .circle {
             position: absolute;
             border-radius: 50%;
             width: 203px;
@@ -61,49 +58,45 @@
         }
 
         /*set paragraph alignment*/
-        .setTextMiddle{
+        .setTextMiddle {
             position: relative;
             font-size: 25px;
-            color: white ;
+            color: white;
         }
 
         /*set circle colors*/
-         body>section:nth-child(1)>div:nth-child(3){
-             background: purple;
-         }
-
-        body>section:nth-child(2)>div:nth-child(1){
-               background: #1B97BB;
+        body > section:nth-child(1) > div:nth-child(3) {
+            background: purple;
         }
 
-        body>section:nth-child(3)>div:nth-child(1){
-              background: #F86351;
+        body > section:nth-child(2) > div:nth-child(1) {
+            background: #1B97BB;
         }
 
-
-
-
-
+        body > section:nth-child(3) > div:nth-child(1) {
+            background: #F86351;
+        }
 
     </style>
 </head>
 <body>
 <section>
-    <div class="Outer_Circle"></div>
-    <div class="Inner_Circle"></div>
+    <div class="inner_Outer_circles" id="Outer"></div>
+    <div class="inner_Outer_circles" id="Inner"></div>
 
-    <!--circles-->
+    <!--circles 1-->
     <div class="circle"><p class="setTextMiddle">Hello</p></div>
 
 </section>
 <section>
+    <!--circle 2-->
     <div class="circle"><p class="setTextMiddle">Welcome To</p></div>
 
 </section>
 <section>
+    <!--circle 3-->
     <div class="circle"><p class="setTextMiddle">Institute of Software Engineering</p></div>
 </section>
-
 
 
 </body>
