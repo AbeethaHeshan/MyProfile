@@ -14,7 +14,7 @@
 
         /*main middle 2 circles (fixed)*/
 
-        .inner_Outer_circles{
+        .inner_Outer_circles {
             position: fixed;
             border-radius: 50%;
             background: transparent;
@@ -35,7 +35,7 @@
 
         }
 
-        #Inner{
+        #Inner {
 
             width: 198px;
             height: 198px;
@@ -58,10 +58,17 @@
         }
 
         /*set paragraph alignment*/
-        .setTextMiddle {
-            position: relative;
+        .circle p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 203px;
             font-size: 25px;
             color: white;
+            margin: 0;
+            text-align: center;
+
+
         }
 
         /*set circle colors*/
@@ -85,17 +92,17 @@
     <div class="inner_Outer_circles" id="Inner"></div>
 
     <!--circles 1-->
-    <div class="circle"><p class="setTextMiddle">Hello</p></div>
+    <div class="circle"><p>Hello</p></div>
 
 </section>
 <section>
     <!--circle 2-->
-    <div class="circle"><p class="setTextMiddle">Welcome To</p></div>
+    <div class="circle"><p>Welcome To</p></div>
 
 </section>
 <section>
     <!--circle 3-->
-    <div class="circle"><p class="setTextMiddle">Institute of Software Engineering</p></div>
+    <div class="circle"><p>Institute <br>of<br> Software Engineering</p></div>
 </section>
 
 
