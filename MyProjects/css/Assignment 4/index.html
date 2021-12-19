@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignment 4</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
     <style>
-       .topBars{
-           height: 20px;
-           border: 2px solid red;
+
+        /*top bars*/
+        body>section>div{
+           height: 50px;
            position:sticky;
            top: 0;
 
@@ -24,34 +27,70 @@
        }
        #forthBar{
             background: #7D322B ;
-
        }
 
 
-
+        /*sections*/
         body>section{
-            border: 2px solid blue;
             height: 100vh;
+        }
+        #firstSection{
+           background: #FFFFFF;
+        }
+        #secondSection{
+            background: #5DB6FF;
+        }
+        #thirdSection{
+            background: #605952;
+        }
+        #forthSection{
+            background: #F23D2A;
+        }
+        /*fonts alignments*/
+        /*top bars*/
+        body>section>div>p{
+            position: relative;
+            font-size: 20px ;
+            color: white;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 15px;
+            display: inline;
+            top: 12px;
+            left: 10px;
+        }
+        /*sections*/
+        body>section>p{
+             position: relative;
+             font-size: 60px;
+             font-weight: bold;
+             display: inline;
+             top: 40vh;
+             left: 42vw;
         }
 
     </style>
 </head>
 <body>
 <!--1-->
-<section>
-    <div class="topBars" id="firstBar"></div>
+<section id="firstSection">
+    <div  id="firstBar"> <p>Card 1 </p> </div>
+    <p>Hello</p>
 </section>
 <!--2-->
-<section>
-    <div class="topBars" id="secondBar"></div>
+<section id="secondSection">
+    <div  id="secondBar"> <p> Card 2 </p></div>
+    <p>How</p>
 </section>
 <!--3-->
-<section>
-    <div class="topBars" id="thirdBar"></div>
+<section id="thirdSection">
+    <div   id="thirdBar"> <p> Card 3 </p> </div>
+    <p>Are</p>
 </section>
 <!--4-->
-<section>
-    <div class="topBars" id="forthBar"></div>
+<section id="forthSection">
+    <div  id="forthBar"> <p>Card 4 </p> </div>
+    <p>You..?</p>
 </section>
 </body>
 </html>
