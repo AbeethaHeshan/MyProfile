@@ -20,9 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8341a71b-d2a3-4685-9135-382b28f1599f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/asserts/css/SectionOne.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asserts/css/SectionTwo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asserts/css/normalize.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -77,7 +74,7 @@
       <updated>1637895439923</updated>
       <workItem from="1637895460862" duration="13301000" />
       <workItem from="1638114895810" duration="1813000" />
-      <workItem from="1640428033342" duration="2195000" />
+      <workItem from="1640428033342" duration="16930000" />
     </task>
     <servers />
   </component>
@@ -105,9 +102,14 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="480" y="149" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1637895950956" />
-    <state x="297" y="27" width="762" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1637948683831">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="297" y="0" width="762" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1640432978801">
+      <screen x="0" y="0" width="1366" height="741" />
     </state>
+    <state x="297" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.741@0.0.1366.741" timestamp="1640432978801" />
     <state x="297" y="27" width="762" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1366.741@0.27.1366.741" timestamp="1637948683831" />
+    <state x="331" y="62" key="search.everywhere.popup" timestamp="1640446122079">
+      <screen x="0" y="0" width="1366" height="741" />
+    </state>
+    <state x="331" y="62" key="search.everywhere.popup/0.0.1366.741@0.0.1366.741" timestamp="1640446122079" />
   </component>
 </project>
