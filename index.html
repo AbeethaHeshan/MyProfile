@@ -75,21 +75,33 @@
         /*end header*/
 
         /*first Section*/
-        main> .SectionOne {
+        main> .SectionOne{
              border: 2px solid red;
-             height: 95vh;
+             height:95vh;
              background: #D0CDEE;
              position: relative;
         }
-        main> .SectionOne > div{
-            border:2px solid #E51500;
+        /* content HEllO and others*/
+        main> .SectionOne > div:nth-child(1){
             position: absolute;
+            border: 2px solid red;
+            width: max-content;
+            height: 161px;
+            bottom: 0;
+            left: 0;
+            right: 100px;
+            top: 0;
+            margin: auto;
+
         }
-        main> .SectionOne > div p{
+        main> .SectionOne > div:nth-child(1)>p{
+            align-self: center;
             margin: 0;
+
         }
         #main{
             font-family: 'Salsa', cursive;
+            color: #131D32;
             font-size: 70px;
         }
         #middle{
@@ -99,6 +111,30 @@
             font-size: 40px;
             font-family: 'Roboto', sans-serif;
         }
+        /*Picture*/
+        main > .SectionOne > div:nth-child(2){
+             position: absolute;
+             height: 300px;
+             width: 300px;
+             border: 2px solid red;
+             top: 0;
+             bottom: 0;
+             left:50px;
+             margin: auto;
+
+        }
+        /*Quote*/
+        main > .SectionOne > div:nth-child(3){
+            position: absolute;
+            height: 67px;
+            width: 480px;
+            border: 2px solid red;
+            bottom: 14px;
+            right: 30px;
+            margin: auto;
+
+        }
+
 
         /*end first section*/
 
@@ -148,15 +184,25 @@
 
 </header>
 <main>
-    <!-- <section><div style="float: left">Left Text</div>
-         <div style="float: right">Right Text</div>
-         <div style="margin: 0 auto; width: 100px;">Centered Text</div> </section> -->
     <section class="SectionOne">
         <div>
             <p id="main"> Hello... </p>
             <p id="middle"> I'm Abeetha Heshan Gunathilaka </p>
             <p id="last"> Software Engineer </p>
         </div>
+
+        <!--picture-->
+        <div></div>
+
+        <!--Text-->
+        <div>
+             <p>
+               " I'm not a great programmer;<br>
+                I'm just a good programmer with great habits."
+                                                      - Kent Beck
+             </p>
+         </div>
+
         <!--   <div style="margin-top: 182px ;margin-left:432px ; ">
                <span style="font-size:70px; font-family:Salsa ; color: #131D32"> Hello...  </span> <br>
                <span style="font-size:25px; font-family: Salsa ; color: #131D32"> I'm Abeetha Heshan Gunathilaka</span> <br>
