@@ -5,8 +5,14 @@
     <link heref="" rel="icon">
     <meta content="width=device-width initial-scale=1 " name="viewport">
     <meta content="AbeethaHeshan,abhithaProfile,developerProfile" name="keywords">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+
     <link href="asserts/css/normalize.css" rel="stylesheet">
     <style>
+
+        /* header */
         header {
             height: 35px;
             position: relative;
@@ -57,11 +63,45 @@
         }
 
         .connect > div {
+            border-radius: 100%;
             margin-top: 3px;
             width: 30px;
             height: 30px;
             z-index: 2;
         }
+        .connect > div:hover{
+            background: #131D32;
+        }
+        /*end header*/
+
+        /*first Section*/
+        main> .SectionOne {
+             border: 2px solid red;
+             height: 95vh;
+             background: #D0CDEE;
+             position: relative;
+        }
+        main> .SectionOne > div{
+            border:2px solid #E51500;
+            position: absolute;
+        }
+        main> .SectionOne > div p{
+            margin: 0;
+        }
+        #main{
+            font-family: 'Salsa', cursive;
+            font-size: 70px;
+        }
+        #middle{
+             font-size: 25px;
+        }
+        #last{
+            font-size: 40px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /*end first section*/
+
 
 
     </style>
@@ -111,7 +151,12 @@
     <!-- <section><div style="float: left">Left Text</div>
          <div style="float: right">Right Text</div>
          <div style="margin: 0 auto; width: 100px;">Centered Text</div> </section> -->
-    <section>
+    <section class="SectionOne">
+        <div>
+            <p id="main"> Hello... </p>
+            <p id="middle"> I'm Abeetha Heshan Gunathilaka </p>
+            <p id="last"> Software Engineer </p>
+        </div>
         <!--   <div style="margin-top: 182px ;margin-left:432px ; ">
                <span style="font-size:70px; font-family:Salsa ; color: #131D32"> Hello...  </span> <br>
                <span style="font-size:25px; font-family: Salsa ; color: #131D32"> I'm Abeetha Heshan Gunathilaka</span> <br>
