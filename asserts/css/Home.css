@@ -1,0 +1,52 @@
+.Home{
+    position: relative;
+    height: 90vh;
+    border: 2px solid red;
+    background: #DEE3E4;
+}
+
+/* main introduction me text*/
+.Home>.div-One{
+    position: absolute;
+    top: 146px;
+    bottom: 0;
+    left: 127px;
+    height: 100px;
+    width: 250px;
+}
+.Home>.div-One>*{
+    margin: 0;
+}
+.Home>.div-One>p{
+    font-size: 70px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    color:#0E092D ;
+}
+.Home>.div-One>p:nth-child(2){
+    font-size: 26px;
+    color: #131D32;
+    font-family: 'Roboto', sans-serif;
+}
+.Home>.div-One>p:nth-child(3){
+    font-size: 24px;
+    color: #131D32;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* Quick contacts Info*/
+.div-Two{
+    position:absolute;
+    height: 20px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    top: 320px;
+    left: 130px;
+}
+.div-Two>div{
+    flex-grow: 1;
+}
+
+
+

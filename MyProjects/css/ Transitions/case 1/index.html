@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case 1</title>
+    <link rel="stylesheet" href="asserts/css/fonts/css/all.css">
+
+    <style>
+
+
+
+
+     section > section {
+           width: 228px;
+           height: 492px;
+           top: 91px;
+           position: relative;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+       }
+
+       section > section > div {
+           height: 40px;
+           width: 100%;
+           position: relative;
+           background: #6c228d;
+           color: white;
+           box-shadow: 1px 2px 3px 2px #3a483b;
+           margin-left: -174px;
+           transition: all 2s;
+       }
+
+       section > section > div > p {
+           margin: 0;
+           display: inline-block;
+           padding: 10px;
+       }
+
+       section > section > div > i {
+           position: absolute;
+           right: 10px;
+           top: 7px;
+           font-size: 28px;
+       }
+
+       section > section > div:hover {
+           margin-left: 0;
+           cursor: pointer;
+           transition: all 2s;
+
+       }
+
+</style>
+
+
+</head>
+<body>
+ <section>
+    <section >
+        <div><p>Menu One</p> <i class="fas fa-address-book fa-2x"></i></div>
+        <div><p>Menu Two </p> <i class="fas fa-ambulance fa-2x"></i></div>
+        <div><p>Menu Three</p><i class="fas fa-atlas fa-2x"></i></div>
+        <div><p>Menu Four</p><i class="fab fa-buffer fa-2x "></i></div>
+        <div><p>Menu Five</p><i class="fas fa-cart-arrow-down fa-2x "></i></div>
+    </section>
+ </section>
+</body>
+</html>

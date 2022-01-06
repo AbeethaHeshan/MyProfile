@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 2</title>
+    <style>
+        section{
+            position: relative;
+            height: 95vh;
+
+        }
+        #circle{
+            position: absolute;
+            width:400px;
+            height:400px;
+            background: navy;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 100%;
+
+        }
+       #circle >h2{
+           position: absolute;
+           margin: auto;
+           left: 0;
+           right: 0;
+           top: 0;
+           bottom: 0;
+           width: max-content;
+           height: max-content;
+           color: white;
+           font-size: 30px;
+           font-family: Ubuntu;
+        }
+        #circle::after{
+            content:"";
+            border: 20px solid #77859d;
+            border-top: 20px solid #ff025f;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+        }
+        #circle:hover::after{
+            transform: rotate(360deg);
+            transition: all 2s;
+            cursor: pointer;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+     <section>
+         <div id="circle">
+             <h2>RWAD</h2>
+         </div>
+
+
+     </section>
+</body>
+</html>

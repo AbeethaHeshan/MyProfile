@@ -1,252 +1,152 @@
-<!Doctype html>
-<html xmlns="http://www.w3.org/1999/html">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title> Abeetha Heshan </title>
-    <link heref="" rel="icon">
-    <meta content="width=device-width initial-scale=1 " name="viewport">
-    <meta content="AbeethaHeshan,abhithaProfile,developerProfile" name="keywords">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <title>Abeetha Heshan</title>
+    <!--normalize (clear the browser css)-->
     <link href="asserts/css/normalize.css" rel="stylesheet">
-    <style>
+    <!--Load Home page css-->
+    <link href="asserts/css/Home.css" rel="stylesheet">
+    <!--add font-aosm-->
+    <link href="asserts/fonts/css/all.css" rel="stylesheet">
 
-        /* header */
-        header {
-            height: 35px;
-            position: relative;
-        }
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600&display=swap" rel="stylesheet">
+    <style>body > header {
+        position: relative;
+        height: 40px;
+        /* border: 3px solid blue;*/
+        margin: auto;
+        background: #DEE3E4;
+    }
 
-        header > ul {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 5px;
-            margin: auto;
-            padding: 0;
-            width: max-content;
+    body > header > nav > div {
+        position: relative;
+        height: 40px;
+        width: 500px;
+        margin: auto;
 
-        }
+    }
 
-        header > ul > li {
-            color: #8387f5;
-            display: inline;
-            padding-right: 14px;
-            font-size: 18px;
+    body > header > nav > div > ul {
+        position: relative;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        top: 10px;
+        margin: 0;
 
-        }
-
-        header > ul > li:hover {
-            color: #131D32;
-
-        }
-
-        .header-Div {
-            position: absolute;
-            background: #8387f5;
-            border-radius: 50px;
-            width: 150px;
-            height: 28px;
-            top: 4px;
-            right: 10px;
-            margin: auto;
-        }
-
-        .connect {
-            display: flex;
-            gap: 5px;
-            justify-content: right;
-            margin-right: 19px;
-            margin-top: 3px;
-
-        }
-
-        .connect > div {
-            border-radius: 100%;
-            margin-top: 3px;
-            width: 30px;
-            height: 30px;
-            z-index: 2;
-        }
-        .connect > div:hover{
-            background: #131D32;
-        }
-        /*end header*/
-
-        /*first Section*/
-        main> .SectionOne{
-
-             border: 2px solid red;
-             height:95vh;
-             position: relative;
-        }
-        /* content HEllO and others*/
-        main> .SectionOne > div:nth-child(1){
-            position: absolute;
-            border: 2px solid red;
-            width: max-content;
-            height: 161px;
-            bottom: 0;
-            left: 67px;
-            right: 108px;
-            top: -94px;
-            margin: auto;
-
-        }
-        main> .SectionOne > div:nth-child(1)>p{
-            align-self: center;
-            margin: 0;
-
-        }
-        #main{
-            font-family: 'Salsa', cursive;
-            color: #131D32;
-            font-size: 70px;
-        }
-        #middle{
-             font-size: 25px;
-        }
-        #last{
-            font-size: 40px;
-            font-family: 'Roboto', sans-serif;
-        }
-        /*Picture*/
-        main > .SectionOne > div:nth-child(2){
-             position: absolute;
-             height: 350px;
-             width: 350px;
-             border: 2px solid red;
-             top: 0;
-             bottom: 0;
-             left:50px;
-             margin: auto;
-
-        }
-        /*Quote*/
-        main > .SectionOne > div:nth-child(3){
-            position: absolute;
-            height: 67px;
-            width: 480px;
-            border: 2px solid red;
-            bottom: 60px;
-            right: 45px;
-            margin: auto;
+        /*border: 2px solid #535282;*/
+        height: 30px;
 
 
-        }
-        main > .SectionOne > div:nth-child(3) > p{
-            margin: 0;
-        }
-        main > .SectionOne > div:nth-child(3) > #first_p{
-            font-size: 18px;
-        }
-        main > .SectionOne > div:nth-child(3) > #second_p{
-            text-align: right;
-            font-size: 18px;
-            margin: 0;
-        }
-        main > .SectionOne > div:nth-child(3) > #third_p{
-            text-align: right;
-            font-size: 15px;
-            margin: 0;
-        }
+    }
 
-        /*end first section*/
+    body > header > nav > div > ul > li {
+        flex-grow: 1;
+        /* border: 2px solid red;*/
+        /* border: 2px solid #ba1663;*/
+        padding-left: 10px;
 
+
+    }
+
+    body > header > nav > div > ul > li > h3 {
+        font-weight: normal;
+        color: #0E092D;
+        margin: 0;
+        font-size: 16px;
+
+    }
+
+    body > header > nav > div > ul > li > div {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        box-sizing: border-box;
+        border: 1px solid #120c3b;
+        position: relative;
+        left: 24%;
+    }
+
+    body > header > nav > div > ul > li:hover h3 {
+        color: #0E092D;
+        cursor: pointer;
+        font-weight: bold;
+
+
+    }
+
+    body > header > nav > div > ul > li:hover div {
+        background: #0E092D;
+        cursor: pointer;
+
+    }
 
 
     </style>
 </head>
 <body>
-
 <header>
-    <ul>
-        <li>About</li>
-        <li>Tools</li>
-        <li>Education</li>
-        <li>Projects</li>
-        <li>Contact</li>
-    </ul>
-
-    <div class="header-Div">
-    </div>
-
-    <div class="connect">
+    <nav>
         <div>
-            <a href="">
-                <img height="30px" src="asserts/icon/About/facebook.png ">
-            </a>
-        </div>
-        <div>
-            <a href="https://github.com/AbeethaHeshan">
-                <img height="30px" src="asserts/icon/About/github.png">
-            </a>
-        </div>
-        <div>
-            <a href="">
-                <img height="30px" src="asserts/icon/About/linkedin.png">
-            </a>
-        </div>
-        <div>
-            <a href="">
-                <img height="30px" src="asserts/icon/About/twitter.png">
-            </a>
+            <ul class="menu">
+                <li>
+                    <h3>Home</h3>
+                    <div></div>
+                </li>
+                <li>
+                    <h3>About</h3>
+                    <div></div>
+                </li>
+                <li>
+                    <h3>Skill</h3>
+                    <div></div>
+                </li>
+                <li>
+                    <h3>Education</h3>
+                    <div></div>
+                </li>
+                <li>
+                    <h3>Projects</h3>
+                    <div></div>
+                </li>
+                <li>
+                    <h3>Contact</h3>
+                    <div></div>
+                </li>
+            </ul>
         </div>
 
-
-    </div>
-
+    </nav>
 
 </header>
 <main>
-    <section class="SectionOne">
-        <div>
-            <p id="main"> Hello... </p>
-            <p id="middle"> I'm Abeetha Heshan Gunathilaka </p>
-            <p id="last"> Software Engineer </p>
+    <section class="Home">
+
+        <!-- main introduction me text -->
+        <div class="div-One">
+            <p>Hello...</p>
+            <p>I'm Abeetha Heshan</p>
+            <p>Software Developer</p>
         </div>
 
-        <!--picture-->
-        <div><img src="asserts/images/SectionOne/profile.png" height="350px"></div>
+        <!-- Quick contacts info-->
+        <div class="div-Two">
+            <div><i class="fab fa-facebook fa-lg"></i></div>
+            <div><i class="fab fa-twitter fa-lg"></i></div>
+            <div><i class="fab fa-linkedin fa-lg "></i></div>
+            <div><i class="fab fa-github fa-lg"></i></div>
+        </div>
 
-        <!--Text-->
-        <div>
-             <p id="first_p">" I'm not a great programmer;</p>
-             <p id="second_p"> I'm just a good programmer with great habits." </p>
-             <p id="third_p"> - Kent Beck </p>
-         </div>
+        <!--Quotes-->
+        <div class="div-Three">
 
 
+        </div>
     </section>
-    <section>
-        <!--<div STYLE="margin-left: 50px ; margin-top: 120px" >
-            <p style="font-size:14px ; font-family: 'Fira Code Light'">
-                Hello, my name is Abeetha Heshan Gunathilaka. I am Software Engineer ,<br>
-                UI/UX developer & Fullstuck Developer .I have been a Study Software Engineering since 2019.
-            </p>
-            <p style="font-size: 13px">
-                a blog for intermediate English learners who want to become more fluent in the language.  <br>
-                I am originally from the United States and I currently live in Germany.<br>
-                I have been a Study Software Engineering since 2019,<br> and specialize in business writing and IELTS preparation. Before becoming a teacher, <br> I worked as a copyeditor for government agencies in Washington DC and as a ghostwriter for startup founders and <br>independent consultants around the world. In my free time,<br> I enjoy hiking, practicing photography, and exploring the city by bike.
-
-
-            </p>
-
-        </div>-->
-
-
-    </section>
-    <section>
-
-
-    </section>
-    <section></section>
-    <section></section>
 </main>
-
-<footer></footer>
-
 </body>
-
 </html>

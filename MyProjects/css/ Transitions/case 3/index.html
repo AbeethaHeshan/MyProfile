@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case 3</title>
+    <style>
+        body>section{
+            position: relative;
+            height: 95vh;
+        }
+        section>div{
+            background: blue;
+            position: relative;
+            width:200px;
+            height:80px;
+            animation-name: rotate;
+            animation-duration: 5s;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            animation-iteration-count: 2;
+            border-radius: 10px;
+
+
+        }
+        @keyframes rotate {
+            0%,10%{
+                background: blue;
+                top: 0;
+                left: 0;
+                transform: rotate(0);
+            }
+            25%{
+               background: yellow;
+                left:1100px;
+                top: 0;
+                transform: rotate(180deg);
+            }
+            50%{
+                background: red;
+                left: 1100px;
+                top: 500px;
+                transform: rotate(360deg);
+            }
+            75%{
+                background: deeppink;
+                top: 500px;
+                bottom: 0;
+                left: 0;
+                transform: rotate(180deg);
+
+
+            }
+            100%{
+                background: orangered;
+                top: 0;
+                transform: rotate(360deg);
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <div>
+
+    </div>
+
+
+</section>
+</body>
+</html>
