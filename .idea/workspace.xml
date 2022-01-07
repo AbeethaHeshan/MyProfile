@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8341a71b-d2a3-4685-9135-382b28f1599f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asserts/images/SectionOne/Vector.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asserts/images/SectionOne/profile 1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asserts/css/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/asserts/css/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asserts/images/SectionOne/profile-blob.svg" beforeDir="false" afterPath="$PROJECT_DIR$/asserts/images/SectionOne/profile-blob.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asserts/css/SectionTwo.css" beforeDir="false" afterPath="$PROJECT_DIR$/asserts/css/Header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +86,9 @@
       <workItem from="1640428033342" duration="35620000" />
       <workItem from="1640504179078" duration="7094000" />
       <workItem from="1640568940863" duration="1557000" />
-      <workItem from="1641466363389" duration="31759000" />
+      <workItem from="1641466363389" duration="33867000" />
+      <workItem from="1641542831694" duration="23240000" />
+      <workItem from="1641573439822" duration="4170000" />
     </task>
     <servers />
   </component>
