@@ -1,11 +1,11 @@
+
 .Home{
     position: relative;
-    height: 90vh;
-    border: 2px solid red;
+    height:600px;
     background: #DEE3E4;
 }
 
-/* main introduction me text*/
+                           /* main introduction me text*/
 .Home>.div-One{
     position: absolute;
     top: 146px;
@@ -34,7 +34,7 @@
     font-weight: bold;
 }
 
-/* Quick contacts Info*/
+                      /* Quick contacts Info*/
 .div-Two{
     position:absolute;
     height: 20px;
@@ -50,3 +50,60 @@
 
 
 
+                            /*quote*/
+.div-Three{
+    position: relative;
+    width: 400px;
+    height: 100px;
+    top: 433px;
+    left: 125px;
+}
+.div-Three>p{
+    margin: 0;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 12px;
+    color: #131D32;
+}
+.div-Three>p:nth-child(1){
+    text-align: left;
+}
+.div-Three>p:nth-child(2){
+    text-align: right;
+}
+.div-Three>p:nth-child(3){
+     text-align: right;
+}
+
+
+                       /*image blob*/
+.div-four{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    bottom: 0;
+    left: 315px;
+    right: 0;
+    margin: auto;
+
+
+}
+#blob{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#profile{
+    position: absolute;
+    height: 250px;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    right: 57px;
+    margin: auto;
+}
