@@ -1,76 +1,81 @@
 
+@media all {
 
-body > header {
-    position: relative;
-    height: 40px;
-    /* border: 3px solid blue;*/
-    margin: auto;
-    background: #DEE3E4;
+
+    body > header {
+        position: relative;
+        height: 40px;
+        /* border: 3px solid blue;*/
+        margin: auto;
+        background: #DEE3E4;
+    }
+
+    body > header > nav > div {
+        position: relative;
+        height: 40px;
+        width: 500px;
+        margin: auto;
+
+    }
+
+    body > header > nav > div > ul {
+        position: relative;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        top: 10px;
+        margin: 0;
+
+        /*border: 2px solid #535282;*/
+        height: 30px;
+
+
+    }
+
+    body > header > nav > div > ul > li {
+        flex-grow: 1;
+        /* border: 2px solid red;*/
+        /* border: 2px solid #ba1663;*/
+        padding-left: 10px;
+
+
+    }
+
+    body > header > nav > div > ul > li > h3 {
+        font-weight: normal;
+        color: #0E092D;
+        margin: 0;
+        font-size: 16px;
+
+    }
+
+    body > header > nav > div > ul > li > div {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        box-sizing: border-box;
+        border: 1px solid #120c3b;
+        position: relative;
+        left: 24%;
+    }
+
+    body > header > nav > div > ul > li:hover h3 {
+        color: #0E092D;
+        cursor: pointer;
+        font-weight: bold;
+
+
+    }
+
+    body > header > nav > div > ul > li:hover div {
+        background: #0e092d;
+        cursor: pointer;
+
+    }
+
 }
 
-body > header > nav > div {
-    position: relative;
-    height: 40px;
-    width: 500px;
-    margin: auto;
-
-}
-
-body > header > nav > div > ul {
-    position: relative;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    flex-direction: row;
-    top: 10px;
-    margin: 0;
-
-    /*border: 2px solid #535282;*/
-    height: 30px;
-
-
-}
-
-body > header > nav > div > ul > li {
-    flex-grow: 1;
-    /* border: 2px solid red;*/
-    /* border: 2px solid #ba1663;*/
-    padding-left: 10px;
-
-
-}
-
-body > header > nav > div > ul > li > h3 {
-    font-weight: normal;
-    color: #0E092D;
-    margin: 0;
-    font-size: 16px;
-
-}
-
-body > header > nav > div > ul > li > div {
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    box-sizing: border-box;
-    border: 1px solid #120c3b;
-    position: relative;
-    left: 24%;
-}
-
-body > header > nav > div > ul > li:hover h3 {
-    color: #0E092D;
-    cursor: pointer;
-    font-weight: bold;
-
-
-}
-
-body > header > nav > div > ul > li:hover div {
-    background: #0e092d;
-    cursor: pointer;
-
-}
 
 
 
@@ -112,7 +117,7 @@ body > header > nav > div > ul > li:hover div {
 
 }
 
-@media all and (min-device-width: 425px) and (max-device-width: 620px){
+@media all and (min-device-width: 425px) and (max-device-width: 620px) and (max-device-width: 768px){
     body > header {
         height: 50px;
     }
@@ -134,4 +139,46 @@ body > header > nav > div > ul > li:hover div {
 
 
 }
+@media all and (min-device-width: 620px) and (max-device-width: 768px) {
+    body > header {
+        height: 50px;
+    }
 
+    body > header > nav > div {
+        width: 360px;
+        top: 15px;
+        height: 50px;
+    }
+
+    body > header > nav > div > ul > li > h3 {
+        font-size: 13px;
+    }
+
+    body > header > nav > div > ul > li > div {
+        width: 9px;
+        height: 9px;
+    }
+
+}
+@media all and (min-width: 768px) and (max-width: 1024px){
+    body > header {
+        height: 50px;
+    }
+
+    body > header > nav > div {
+        width: 400px;
+        top: 15px;
+        height: 50px;
+    }
+
+    body > header > nav > div > ul > li > h3 {
+        font-size: 14px;
+    }
+
+    body > header > nav > div > ul > li > div {
+        width: 9px;
+        height: 9px;
+    }
+
+
+}

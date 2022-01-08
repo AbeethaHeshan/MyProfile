@@ -1,0 +1,85 @@
+/*section*/
+.aboutMe{
+    background: #DEE3E4;
+    position: relative;
+    height: 650px;
+}
+/*speech boble*/
+.aboutMe > #img-speech {
+    position: absolute;
+
+    top:100px;
+    left:94px;
+    margin: auto;
+    height: 225px;
+    width: 375px;
+}
+/*about me div*/
+.aboutMe > #about {
+    position: absolute;
+    background: rgba(166, 203, 185, 0.38);
+    box-shadow: 4px 6px 12px -1px #60a6cbb9;
+    top:55px;
+    right: 83px;
+    margin: auto;
+    width: 504px;
+    height: 302px;
+    border-radius: 98px 0 98px 0 ;
+
+}
+/*im div*/
+.aboutMe > #iam {
+    position: absolute;
+    background: rgba(166, 203, 185, 0.38);
+    box-shadow: 4px 6px 12px -1px #60a6cbb9;
+    bottom:20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 325px;
+    height: 211px;
+    border-radius: 98px 0 98px 0 ;
+
+}
+
+
+
+/*character*/
+.aboutMe > #img-man{
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+    margin: auto;
+    height: 300px;
+    z-index: 1;
+}
+
+/*pot*/
+.aboutMe > #pot {
+
+    position: absolute;
+    bottom: 45px;
+    left: 337px;
+    margin: auto;
+    height: 50px;
+    width: 50px;
+
+}
+.aboutMe > #pot >img{
+    height: 50px;
+    width: 50px;
+}
+
+/*bush*/
+.aboutMe > #img-tree{
+    position: absolute;
+    bottom: 92px;
+    left: 320px;
+    margin: auto;
+    height:120px;
+
+}
+.aboutMe > #img-tree >img{
+    height: 120px;
+    width:80px;
+}

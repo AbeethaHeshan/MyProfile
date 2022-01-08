@@ -20,9 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8341a71b-d2a3-4685-9135-382b28f1599f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/asserts/css/about.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asserts/images/SectionTwo/Character.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asserts/images/SectionTwo/bush.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asserts/images/SectionTwo/pot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asserts/images/SectionTwo/speech-bubbles.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asserts/css/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/asserts/css/Header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asserts/css/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/asserts/css/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asserts/css/SectionTwo.css" beforeDir="false" afterPath="$PROJECT_DIR$/asserts/css/Header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +38,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -53,22 +58,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/asserts/images/SectionOne" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/asserts/images/SectionTwo" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/asserts/images/SectionTwo" />
+      <recent name="$PROJECT_DIR$/asserts/images/SectionOne" />
+      <recent name="$PROJECT_DIR$/MyProjects/css/Usage of Cascade Style Sheets - 02/Assignment 1" />
+      <recent name="$PROJECT_DIR$/MyProjects/css/Assignment5" />
+      <recent name="$PROJECT_DIR$/asserts/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/MyProjects/css/Usage of Cascade Style Sheets - 02" />
       <recent name="$PROJECT_DIR$/MyProjects/css/Usage of Cascade Style Sheets - 01" />
       <recent name="$PROJECT_DIR$/asserts/images/SectionOne" />
       <recent name="$PROJECT_DIR$/asserts/icon/About" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/asserts/images/SectionOne" />
-      <recent name="$PROJECT_DIR$/MyProjects/css/Usage of Cascade Style Sheets - 02/Assignment 1" />
-      <recent name="$PROJECT_DIR$/MyProjects/css/Assignment5" />
-      <recent name="$PROJECT_DIR$/asserts/images" />
-      <recent name="$PROJECT_DIR$/asserts" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -88,7 +93,8 @@
       <workItem from="1640568940863" duration="1557000" />
       <workItem from="1641466363389" duration="33867000" />
       <workItem from="1641542831694" duration="23240000" />
-      <workItem from="1641573439822" duration="4170000" />
+      <workItem from="1641573439822" duration="8381000" />
+      <workItem from="1641618101100" duration="8309000" />
     </task>
     <servers />
   </component>

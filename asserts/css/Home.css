@@ -1,124 +1,124 @@
+@media all {
+    .Home {
+        position: relative;
+        height: 600px;
+        background: #DEE3E4;
+    }
 
-.Home {
-    position: relative;
-    height: 600px;
-    background: #DEE3E4;
+    /* main introduction me text*/
+    .Home > .div-One {
+        position: absolute;
+        top: 146px;
+        bottom: 0;
+        left: 127px;
+        height: 100px;
+        width: 250px;
+    }
+
+    .Home > .div-One > * {
+        margin: 0;
+    }
+
+    .Home > .div-One > p {
+        font-size: 70px;
+        font-family: 'Fira Sans Condensed', sans-serif;
+        color: #0E092D;
+    }
+
+    .Home > .div-One > p:nth-child(2) {
+        font-size: 26px;
+        color: #131D32;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .Home > .div-One > p:nth-child(3) {
+        font-size: 24px;
+        color: #131D32;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+    }
+
+    /* Quick contacts Info*/
+    .div-Two {
+        position: absolute;
+        height: 20px;
+        width: 150px;
+        display: flex;
+        flex-direction: row;
+        top: 320px;
+        left: 130px;
+    }
+
+    .div-Two > div {
+        flex-grow: 1;
+    }
+
+
+    /*quote*/
+    .div-Three {
+        position: relative;
+        width: 400px;
+        height: 100px;
+        top: 433px;
+        left: 125px;
+    }
+
+    .div-Three > p {
+        margin: 0;
+        font-family: 'Aclonica', sans-serif;
+        font-size: 12px;
+        color: #131D32;
+    }
+
+    .div-Three > p:nth-child(1) {
+        text-align: left;
+    }
+
+    .div-Three > p:nth-child(2) {
+        text-align: right;
+    }
+
+    .div-Three > p:nth-child(3) {
+        text-align: right;
+    }
+
+
+    /*image blob*/
+    .div-four {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        top: 0;
+        bottom: 0;
+        left: 224px;
+        right: 0;
+        margin: auto;
+
+
+    }
+
+    #blob {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    #profile {
+        position: absolute;
+        height: 250px;
+        top: 56px;
+        bottom: 0;
+        left: 0;
+        right: 57px;
+        margin: auto;
+    }
+
 }
-
-/* main introduction me text*/
-.Home > .div-One {
-    position: absolute;
-    top: 146px;
-    bottom: 0;
-    left: 127px;
-    height: 100px;
-    width: 250px;
-}
-
-.Home > .div-One > * {
-    margin: 0;
-}
-
-.Home > .div-One > p {
-    font-size: 70px;
-    font-family: 'Fira Sans Condensed', sans-serif;
-    color: #0E092D;
-}
-
-.Home > .div-One > p:nth-child(2) {
-    font-size: 26px;
-    color: #131D32;
-    font-family: 'Roboto', sans-serif;
-}
-
-.Home > .div-One > p:nth-child(3) {
-    font-size: 24px;
-    color: #131D32;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-}
-
-/* Quick contacts Info*/
-.div-Two {
-    position: absolute;
-    height: 20px;
-    width: 150px;
-    display: flex;
-    flex-direction: row;
-    top: 320px;
-    left: 130px;
-}
-
-.div-Two > div {
-    flex-grow: 1;
-}
-
-
-/*quote*/
-.div-Three {
-    position: relative;
-    width: 400px;
-    height: 100px;
-    top: 433px;
-    left: 125px;
-}
-
-.div-Three > p {
-    margin: 0;
-    font-family: 'Aclonica', sans-serif;
-    font-size: 12px;
-    color: #131D32;
-}
-
-.div-Three > p:nth-child(1) {
-    text-align: left;
-}
-
-.div-Three > p:nth-child(2) {
-    text-align: right;
-}
-
-.div-Three > p:nth-child(3) {
-    text-align: right;
-}
-
-
-/*image blob*/
-.div-four {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    top: 0;
-    bottom: 0;
-    left: 315px;
-    right: 0;
-    margin: auto;
-
-
-}
-
-#blob {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-#profile {
-    position: absolute;
-    height: 250px;
-    top: 56px;
-    bottom: 0;
-    left: 0;
-    right: 57px;
-    margin: auto;
-}
-
-
 /*RESPONSIVE*/
 
 @media all and (max-width: 320px) {
@@ -513,8 +513,5 @@
     .div-Three > p:nth-child(3) {
         text-align: right;
     }
-
-
-
 
 }
