@@ -1,51 +1,51 @@
 /*section*/
-.aboutMe{
+.aboutMe {
     background: #DEE3E4;
     position: relative;
     height: 650px;
 }
+
 /*speech boble*/
 .aboutMe > #img-speech {
     position: absolute;
-
-    top:100px;
-    left:94px;
+    top: 100px;
+    left: 94px;
     margin: auto;
     height: 225px;
     width: 375px;
 }
+
 /*about me div*/
 .aboutMe > #about {
     position: absolute;
     background: rgba(166, 203, 185, 0.38);
     box-shadow: 4px 6px 12px -1px #60a6cbb9;
-    top:55px;
+    top: 55px;
     right: 83px;
     margin: auto;
     width: 504px;
     height: 302px;
-    border-radius: 98px 0 98px 0 ;
+    border-radius: 98px 0 98px 0;
 
 }
+
 /*im div*/
 .aboutMe > #iam {
     position: absolute;
     background: rgba(166, 203, 185, 0.38);
     box-shadow: 4px 6px 12px -1px #60a6cbb9;
-    bottom:20px;
+    bottom: 20px;
     right: 0;
     left: 0;
     margin: auto;
     width: 325px;
     height: 211px;
-    border-radius: 98px 0 98px 0 ;
-
+    border-radius: 98px 0 98px 0;
 }
 
 
-
 /*character*/
-.aboutMe > #img-man{
+.aboutMe > #img-man {
     position: absolute;
     bottom: 0;
     left: 150px;
@@ -65,21 +65,555 @@
     width: 50px;
 
 }
-.aboutMe > #pot >img{
+
+.aboutMe > #pot > img {
     height: 50px;
     width: 50px;
 }
 
 /*bush*/
-.aboutMe > #img-tree{
+.aboutMe > #img-tree {
     position: absolute;
     bottom: 92px;
     left: 320px;
     margin: auto;
-    height:120px;
+    height: 120px;
 
 }
-.aboutMe > #img-tree >img{
+
+.aboutMe > #img-tree > img {
     height: 120px;
-    width:80px;
+    width: 80px;
 }
+
+.aboutMe > #about > h2 {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: max-content;
+    width: max-content;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 37px;
+    color: rgba(15, 46, 61, 0.73);
+    margin: auto;
+}
+
+
+.aboutMe > #about > p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: max-content;
+    width: max-content;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+    color: rgba(8, 9, 75, 0.73);
+    margin: auto;
+}
+
+
+.aboutMe > #iam > h3 {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    height: max-content;
+    width: max-content;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 37px;
+    color: rgba(10, 33, 43, 0.73);
+    margin: auto;
+}
+
+
+.aboutMe > #iam > p {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: max-content;
+    width: max-content;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+    color: rgba(16, 17, 52, 0.73);
+    margin: auto;
+}
+
+
+/*button*/
+ .aboutMe > #about >#download{
+     position: absolute;
+     width: 116px;
+     height: 31px;
+     border-radius: 20px;
+     top: 132px;
+     bottom: 2px;
+     background: #120c3b;
+     left: 34px;
+     margin: auto;
+     border: 3px solid #120c3b;
+     color: white;;
+ }
+
+
+
+
+
+
+
+
+
+
+/*RESPONSIVE*/
+
+
+@media all and (max-width: 320px) {
+
+}
+
+@media all and  (min-device-width: 320px) and (max-device-width: 375px) {
+    /*S[eech boble*/
+    .aboutMe > #img-speech {
+        display: none;
+    }
+
+    /*about me div*/
+    .aboutMe > #about {
+        top: 50px;
+        right: 33px;
+        left: 0;
+        width: 250px;
+        height: 130px;
+        border-radius: 60px 0 60px 0;
+    }
+
+    /*about me div h2*/
+    .aboutMe > #about > h2 {
+        font-size: 25px;
+        margin: auto;
+    }
+
+    .aboutMe > #about > p {
+        top: 40px;
+        font-size: 10px;
+        width: 220px;
+        height: 50px;
+    }
+
+    .aboutMe > #iam {
+        top: -45px;;
+        right: 0;
+        left: 80px;
+        bottom: 10px;
+        width: 200px;
+        height: 100px;
+        border-radius: 60px 0 60px 0;
+    }
+
+
+    /*about me div h3*/
+    .aboutMe > #iam > h3 {
+        font-size: 25px;
+    }
+
+    /* ima div p */
+    .aboutMe > #iam > p {
+        top: 20px;
+        font-size: 10px;
+    }
+
+
+    /*character*/
+    .aboutMe > #img-man {
+        bottom: 50px;
+        left: 35px;
+        margin: auto;
+        height: 200px;
+        z-index: 1;
+    }
+
+    .aboutMe > #img-man > img {
+        height: 200px;
+    }
+
+    /*pot*/
+    .aboutMe > #pot {
+        left: 160px;
+        height: 40px;
+        width: 40px;
+    }
+
+    .aboutMe > #pot > img {
+        height: 40px;
+        width: 40px;
+    }
+
+
+    /*bush*/
+    .aboutMe > #img-tree {
+        bottom: 80px;
+        left: 135px;
+    }
+
+
+}
+
+@media all and (min-device-width: 375px) and (max-device-width: 425px) {
+    /*S[eech boble*/
+    .aboutMe > #img-speech {
+        display: none;
+    }
+
+    /*about me div*/
+    .aboutMe > #about {
+        top: 50px;
+        right: 33px;
+        left: 0;
+        width: 300px;
+        height: 150px;
+        border-radius: 60px 0 60px 0;
+    }
+
+    /*about me div h2*/
+    .aboutMe > #about > h2 {
+        font-size: 30px;
+        margin: auto;
+    }
+
+    .aboutMe > #about > p {
+        top: 40px;
+        font-size: 10px;
+        width: 250px;
+        height: 60px;
+    }
+
+    .aboutMe > #iam {
+        top: 0;
+        right: 0;
+        left: 82px;
+        bottom: 24px;
+        width: 250px;
+        height: 120px;
+        border-radius: 60px 0 60px 0;
+    }
+
+
+    /*about me div h3*/
+    .aboutMe > #iam > h3 {
+        font-size: 25px;
+    }
+
+    /* ima div p */
+    .aboutMe > #iam > p {
+        top: 20px;
+        font-size: 10px;
+    }
+
+
+    /*character*/
+    .aboutMe > #img-man {
+        bottom: 20px;
+        left: 35px;
+        margin: auto;
+        height: 200px;
+        z-index: 1;
+    }
+
+    .aboutMe > #img-man > img {
+        height: 200px;
+    }
+
+    /*pot*/
+    .aboutMe > #pot {
+        left: 160px;
+        height: 40px;
+        width: 40px;
+    }
+
+    .aboutMe > #pot > img {
+        height: 40px;
+        width: 40px;
+    }
+
+
+    /*bush*/
+    .aboutMe > #img-tree {
+        bottom: 80px;
+        left: 135px;
+    }
+
+}
+
+@media all and (min-device-width: 425px) and (max-device-width: 620px) and (max-device-width: 768px) {
+    /*S[eech boble*/
+    .aboutMe > #img-speech {
+        display: none;
+    }
+
+    /*about me div*/
+    .aboutMe > #about {
+        top: 50px;
+        left: 48px;
+
+        width: 350px;
+        height: 175px;
+        margin: unset;
+    }
+
+    /*about me div h2*/
+    .aboutMe > #about > h2 {
+        font-size: 30px;
+        margin: auto;
+    }
+
+    .aboutMe > #about > p {
+        top: 40px;
+        font-size: 13px;
+        width: 300px;
+        height: 65px;
+    }
+
+    .aboutMe > #iam {
+        top: 75px;
+        right: -104px;;
+        left: 0;
+        bottom: 24px;
+        width: 300px;
+        height: 150px;
+        border-radius: 60px 0 60px 0;
+    }
+
+
+    /*about me div h3*/
+    .aboutMe > #iam > h3 {
+        font-size: 30px;
+    }
+
+    /* ima div p */
+    .aboutMe > #iam > p {
+        top: 20px;
+        font-size: 12px;
+    }
+
+
+    /*character*/
+    .aboutMe > #img-man {
+        bottom: 20px;
+        left: 35px;
+        margin: auto;
+        height: 300px;
+        z-index: 1;
+    }
+
+    .aboutMe > #img-man > img {
+        height: 300px;
+    }
+
+    /*pot*/
+    .aboutMe > #pot {
+        bottom: 30px;
+        left: 235px;
+        height: 53px;
+        width: 53px;
+    }
+
+    .aboutMe > #pot > img {
+        height: 53px;
+        width: 53px;
+    }
+
+
+    /*bush*/
+    .aboutMe > #img-tree {
+        bottom: 80px;
+        left: 220px;
+    }
+
+}
+
+@media all and (min-device-width: 620px) and (max-device-width: 768px) {
+    /*Speech boble*/
+    .aboutMe > #img-speech {
+        display: none;
+    }
+
+    /*about me div*/
+    .aboutMe > #about {
+
+        top: 50px;
+        right: 250px;
+        left: 0;
+        width: 329px;
+        height: 167px;
+        border-radius: 60px 0 60px 0;
+    }
+
+    /*about me div h2*/
+    .aboutMe > #about > h2 {
+        font-size: 30px;
+        margin: auto;
+    }
+
+    .aboutMe > #about > p {
+        top: 40px;
+        font-size: 10px;
+        width: 250px;
+        height: 60px;
+    }
+
+    .aboutMe > #iam {
+        top: 0;
+        right: 0;
+        left: 255px;
+        bottom: 24px;
+        width: 290px;
+        height: 129px;
+        border-radius: 60px 0 60px 0;
+    }
+
+
+    /*about me div h3*/
+    .aboutMe > #iam > h3 {
+        font-size: 25px;
+    }
+
+    /* ima div p */
+    .aboutMe > #iam > p {
+        top: 20px;
+        font-size: 10px;
+    }
+
+
+    /*character*/
+    .aboutMe > #img-man {
+        bottom: 20px;
+        left: 46px;
+        margin: auto;
+        height: 250px;
+        z-index: 1;
+    }
+
+    .aboutMe > #img-man > img {
+        height: 250px;;
+    }
+
+    /*pot*/
+    .aboutMe > #pot {
+        left: 230px;
+        height: 50px;
+        width: 50px;
+    }
+
+    .aboutMe > #pot > img {
+        height: 50px;
+        width: 50px;
+    }
+
+
+    /*bush*/
+    .aboutMe > #img-tree {
+        bottom: 86px;
+        left: 210px;
+    }
+
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .aboutMe > #img-speech {
+        display: none;
+    }
+
+    /*about me div*/
+
+    .aboutMe > #about {
+        top: 64px;
+        right: 356px;
+        left: 0;
+        width: 366px;
+        height: 184px;
+        border-radius: 60px 0 60px 0;
+    }
+
+    /*about me div h2*/
+    .aboutMe > #about > h2 {
+        font-size: 36px;
+        margin: auto;
+    }
+
+    .aboutMe > #about > p {
+        top: 17px;
+        font-size: 13px;
+        width: 293px;
+        height: 61px;
+    }
+
+    .aboutMe > #iam {
+        top: 74px;
+        right: 0;
+        left: 413px;
+        bottom: 24px;
+        width: 336px;
+        height: 150px;
+        border-radius: 60px 0 60px 0;
+    }
+
+
+    /*about me div h3*/
+    .aboutMe > #iam > h3 {
+        font-size: 32px;
+    }
+
+    /* ima div p */
+    .aboutMe > #iam > p {
+        top: 23px;
+        font-size: 15px;
+    }
+
+
+    /*character*/
+    .aboutMe > #img-man {
+        bottom: 20px;
+        left: 66px;
+        margin: auto;
+        height: 270px;
+        z-index: 1;
+    }
+
+    .aboutMe > #img-man > img {
+        height: 270px;
+    }
+
+    /*pot*/
+    .aboutMe > #pot {
+        left: 230px;
+        height: 50px;
+        width: 50px;
+    }
+
+    .aboutMe > #pot > img {
+        height: 50px;
+        width: 50px;
+    }
+
+
+    /*bush*/
+    .aboutMe > #img-tree {
+        bottom: 86px;
+        left: 210px;
+    }
+
+}
+
+@media all and (min-width: 1024px){
+
+
+}
+
+
+
+
