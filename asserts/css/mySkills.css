@@ -200,7 +200,7 @@
 
 
 .skill-set > div > div:nth-child(2){
-       background: rgba(117, 161, 182, 0.51);
+      /* background: rgba(117, 161, 182, 0.51);*/
        box-shadow: 4px 6px 7px 1px #60a6cbb9;
 }
 
@@ -509,16 +509,329 @@
 }
 
 @media all and (min-device-width: 620px) and (max-device-width: 768px) {
+    .skill > .skill-set {
+        position: relative;
+        /* border: 2px solid red;*/
+        height: 520px;
+        width: max-content;
+        display: grid;
+        grid-template-rows: repeat(3,180px);
+        grid-template-columns: repeat(2,260px);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .skill>.skill-set>div{
+        flex-grow: 1;
+        flex-wrap: wrap;
+        width: 200px;
+        height: 150px;
+    }
+
+
+    .skill-set > div > div:nth-child(1) {
+        width: 45px;
+        height: 45px;
+        top: -29px;
+        left: 63px;
+        border-radius: 100%;
+        transform: rotate(45deg);
+        position: relative;
+
+    }
+
+    .skill > .skill-set > div {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        left: 20px;
+        margin-top: 10px;
+        margin-left: 8px;
+        margin-right: auto;
+        top: 21px;
+        bottom: 0;
+
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius:30px ;
+
+        background: rgba(105, 149, 170, 0.51);
+        box-shadow: 4px 6px 7px 1px #60a6cbb9;
+
+    }
+
+
+    #one {
+        background: url("../images/SectionThree/icons eztra/Java.png")
+        no-repeat center;
+        background-size: 80px 80px;
+
+    }
+
+    #two{
+        background: url("../images/SectionThree/icons eztra/html.png")
+        no-repeat center ;
+        background-size: 80px 80px;
+    }
+
+    #three{
+        background: url("../images/SectionThree/icons eztra/css3.png")
+        no-repeat center;
+        background-size: 80px 80px;
+    }
+
+    #four{
+        background: url("../images/SectionThree/icons eztra/java-script.png")
+        no-repeat center;
+        background-size: 80px 80px;
+
+    }
+    #five{
+
+
+    }
+    #six{
+        background: url("../images/SectionThree/icons eztra/mysql.png")
+        no-repeat center;
+        background-size: 80px 80px;
+
+    }
+
+
+    .skill-set >div>div:nth-child(1)>h3{
+        font-size: 18px;
+    }
+
+
+
+
+
+    .skill-set>div>div:nth-child(2){
+        display: none;
+    }
 
 
 
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
+    /*main container*/
+    .skill > .skill-set {
+       /* border: 2px solid red;*/
+        position: relative;
+        height: 500px;
+        top: 110px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
+    /*boxes*/
+    .skill > .skill-set > div {
+        position: relative;
+        flex-grow: 1;
+        flex-basis: auto;
+     /*   border: 2px solid #2a1342;*/
+        width:250px;
+        height: 220px;
+    }
+
+    /*circles*/
+    .skill-set > div > div:nth-child(1) {
+
+        width: 60px;
+        height:60px;
+        top: 23px;
+        left: 17px;
+        border-radius: 100%;
+        transform: rotate(45deg);
+        position: relative;
+        z-index: 2;
+    }
+
+    /*divs*/
+    .skill-set > div > div:nth-child(2){
+        position: absolute;
+       /* border: 2px solid black;*/
+        width: 200px;
+        height: 150px;
+        left:-3px;
+        right: 0;
+        top: 50px;
+        margin: auto;
+        border-top-left-radius: 51px;
+        border-bottom-right-radius: 40px;
+    }
+    /* div image visible false*/
+    .skill-set > div > div:nth-child(2)>div>img{
+        display: none;
+    }
+
+     /*add picture*/
+
+    .skill > .skill-set > div > div:nth-child(1) > h3{
+        color: transparent;
+        width: 40px;
+        height: 40px;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    #circle-1 > h3 {
+        background: url("../images/SectionThree/icons eztra/Java.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #circle-2 > h3 {
+        background: url("../images/SectionThree/icons eztra/html.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #circle-3 > h3 {
+        background: url("../images/SectionThree/icons eztra/css3.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #circle-4 > h3 {
+        background: url("../images/SectionThree/icons eztra/java-script.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #circle-5 > h3 {
+
+    }
+    #circle-6 > h3 {
+        background: url("../images/SectionThree/icons eztra/mysql.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
+
+
+
+  /* circle after:: */
+    #one > #circle-1::after {
+        background: #eaaaa3;
+    }
+
+    #two > #circle-2::after {
+        background: #d4c6a6;
+    }
+
+    #three > #circle-3::after {
+        background: #9ec2d0;
+    }
+
+    #four > #circle-4::after {
+        background: #aac675;
+    }
+
+    #five > #circle-5::after {
+        background: rgba(157, 219, 134, 0.97);
+    }
+
+    #six > #circle-6::after {
+        background: #e3b497;
+    }
+
+    .skill-set > div > div:nth-child(2)>div{
+        width: 199px;
+    }
+
+
+
+
+
+
+
+
+
+
+    .skill-set > div > div:nth-child(1)::after{
+
+        content: "";
+        background: url("../images/SectionThree/icons eztra/css3.png");
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }
 
 @media all and (min-width: 1024px){
+    /*circles*/
+    .skill-set > div > div:nth-child(1) {
+
+        width: 100px;
+        height: 100px;
+        top: -6px;
+        left: 27px;
+        border-radius: 100%;
+        transform: rotate(45deg);
+        position: relative;
+        z-index: 2;
+    }
+
+    /*divs*/
+    .skill-set > div > div:nth-child(2){
+        position: absolute;
+        /* border: 2px solid black; */
+        width: 241px;
+        height: 158px;
+        left: -18px;
+        right: 0;
+        top: 32px;
+        margin: auto;
+        border-top-left-radius: 51px;
+        border-bottom-right-radius: 40px;
+    }
+
+
+    /*add picture*/
+
+    .skill > .skill-set > div > div:nth-child(1) > h3{
+        color: transparent;
+        width: 60px;
+        height: 60px;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    #circle-1 > h3 {
+        background: url("../images/SectionThree/icons eztra/Java.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #circle-2 > h3 {
+        background: url("../images/SectionThree/icons eztra/html.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #circle-3 > h3 {
+        background: url("../images/SectionThree/icons eztra/css3.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #circle-4 > h3 {
+        background: url("../images/SectionThree/icons eztra/java-script.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #circle-5 > h3 {
+
+    }
+    #circle-6 > h3 {
+        background: url("../images/SectionThree/icons eztra/mysql.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
 
 
 }
