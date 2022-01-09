@@ -7,7 +7,6 @@
 
 .skill > .skill-set {
     position: relative;
-   /* border: 2px solid red;*/
     height: 500px;
     top: 110px;
 
@@ -201,7 +200,7 @@
 
 
 .skill-set > div > div:nth-child(2){
-      background: rgba(117, 161, 182, 0.51);
+       background: rgba(117, 161, 182, 0.51);
        box-shadow: 4px 6px 7px 1px #60a6cbb9;
 }
 
@@ -218,6 +217,310 @@
     font-size: 37px;
     color: rgb(19, 28, 54);
     margin: auto;
+}
+
+
+                                              /*Responsive*/
+
+@media all and (max-width: 320px) {
+
+}
+
+@media all and  (min-device-width: 320px) and (max-device-width: 375px) {
+    .skill {
+        position: relative;
+        background: #DEE3E4;
+    }
+    .skill > .skill-set {
+
+        height: 400px;
+        width:300px;
+        position: relative;
+        /*  border: 2px solid #040610;*/
+        display:grid;
+        grid-template-columns: repeat(2,100px);
+        grid-template-rows: repeat(3,100px);
+        grid-gap: 40px 40px;
+
+        top: 145px;
+        left: 15px;
+        margin: auto;
+
+    }
+    .skill > .skill-set > div {
+        position: relative;
+        /* border: 2px solid #179c4d;*/
+        /* background: #E51500;*/
+        width:100px;
+        height:100px;
+        left: 20px;
+        top: 10px;
+
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius:30px ;
+
+        background: rgba(105, 149, 170, 0.51);
+        box-shadow: 4px 6px 7px 1px #60a6cbb9;
+
+    }
+    .skill-set > div > div:nth-child(1) {
+        display: none;
+    }
+
+    .skill-set > div > div:nth-child(2){
+        display: none;
+    }
+
+    #one{
+        background: url("../images/SectionThree/icons eztra/Java.png")
+        no-repeat center  ;
+        background-size: 80px 80px;
+
+    }
+
+    #two{
+        background: url("../images/SectionThree/icons eztra/html.png")
+        no-repeat center ;
+        background-size: 80px 80px;
+    }
+
+    #three{
+        background: url("../images/SectionThree/icons eztra/css3.png")
+        no-repeat center;
+        background-size: 80px 80px;
+    }
+
+    #four{
+        background: url("../images/SectionThree/icons eztra/java-script.png")
+        no-repeat center;
+        background-size: 80px 80px;
+
+    }
+    #five{
+
+
+    }
+    #six{
+        background: url("../images/SectionThree/icons eztra/mysql.png")
+        no-repeat center;
+        background-size: 80px 80px;
+
+    }
+
+
+}
+
+@media all and (min-device-width: 375px) and (max-device-width: 425px) {
+
+    .skill {
+        position: relative;
+        background: #DEE3E4;
+    }
+    .skill > .skill-set {
+
+        height: 400px;
+        width:300px;
+        position: relative;
+      /*  border: 2px solid #040610;*/
+        display:grid;
+        grid-template-columns: repeat(2,100px);
+        grid-template-rows: repeat(3,100px);
+        grid-gap: 40px 40px;
+
+        top: 159px;
+        left: 55px;
+
+    }
+    .skill > .skill-set > div {
+        position: relative;
+        width:100px;
+        height:100px;
+        left: 20px;
+        top: 10px;
+
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius:30px ;
+
+        background: rgba(105, 149, 170, 0.51);
+        box-shadow: 4px 6px 7px 1px #60a6cbb9;
+
+    }
+    .skill-set > div > div:nth-child(1) {
+       display: none;
+    }
+
+    .skill-set > div > div:nth-child(2){
+       display: none;
+    }
+
+    #one{
+        background: url("../images/SectionThree/icons eztra/Java.png")
+                        no-repeat center;
+        background-size: 80px 80px;
+
+    }
+
+    #two{
+        background: url("../images/SectionThree/icons eztra/html.png")
+        no-repeat center ;
+        background-size: 80px 80px;
+    }
+
+    #three{
+        background: url("../images/SectionThree/icons eztra/css3.png")
+        no-repeat center;
+        background-size: 80px 80px;
+    }
+
+    #four{
+        background: url("../images/SectionThree/icons eztra/java-script.png")
+        no-repeat center;
+        background-size: 80px 80px;
+
+    }
+    #five{
+
+
+    }
+    #six{
+        background: url("../images/SectionThree/icons eztra/mysql.png")
+        no-repeat center;
+        background-size: 80px 80px;
+
+    }
+
+
+
+
+
+
+
+}
+
+@media all and (min-device-width: 425px) and (max-device-width: 620px) and (max-device-width: 768px) {
+
+    .skill > .skill-set {
+        position: relative;
+        /* border: 2px solid red;*/
+        height: 520px;
+        width: max-content;
+        display: grid;
+        grid-template-rows: repeat(3,180px);
+        grid-template-columns: repeat(2,180px);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .skill>.skill-set>div{
+        flex-grow: 1;
+        flex-wrap: wrap;
+        width: 200px;
+        height: 150px;
+    }
+
+
+    .skill-set > div > div:nth-child(1) {
+        width: 45px;
+        height: 45px;
+        top: -29px;
+        left: 63px;
+        border-radius: 100%;
+        transform: rotate(45deg);
+        position: relative;
+
+    }
+
+    .skill > .skill-set > div {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        left: 20px;
+        margin-top: 10px;
+        margin-left: 8px;
+        margin-right: auto;
+        top: 21px;
+        bottom: 0;
+
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius:30px ;
+
+        background: rgba(105, 149, 170, 0.51);
+        box-shadow: 4px 6px 7px 1px #60a6cbb9;
+
+    }
+
+
+    #one {
+        background: url("../images/SectionThree/icons eztra/Java.png")
+        no-repeat center;
+        background-size: 80px 80px;
+
+    }
+
+    #two{
+        background: url("../images/SectionThree/icons eztra/html.png")
+        no-repeat center ;
+        background-size: 80px 80px;
+    }
+
+    #three{
+        background: url("../images/SectionThree/icons eztra/css3.png")
+        no-repeat center;
+        background-size: 80px 80px;
+    }
+
+    #four{
+        background: url("../images/SectionThree/icons eztra/java-script.png")
+        no-repeat center;
+        background-size: 80px 80px;
+
+    }
+    #five{
+
+
+    }
+    #six{
+        background: url("../images/SectionThree/icons eztra/mysql.png")
+        no-repeat center;
+        background-size: 80px 80px;
+
+    }
+
+
+    .skill-set >div>div:nth-child(1)>h3{
+           font-size: 18px;
+    }
+
+
+
+
+
+    .skill-set>div>div:nth-child(2){
+        display: none;
+    }
+
+
+
+
+
+}
+
+@media all and (min-device-width: 620px) and (max-device-width: 768px) {
+
+
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media all and (min-width: 1024px){
+
+
 }
 
 
