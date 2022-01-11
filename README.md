@@ -8,24 +8,18 @@
      wire frame   |  https://wireframe.cc/pro/pp/1170247fb507387 
      mockup       |  https://www.figma.com/file/zYKPWZPompGulwCxlTVotS/Untitled?node-id=407%3A2
      gloomaps     |  https://www.gloomaps.com/KbsxtdgQ9F   
+     git          : https://abeethaheshan.github.io/MyProfile/
      
      
      Assignments
-         Layouts 
-            1.   
-            2.
-            3.
-            4.
-            
-         Transitions 
-            1.   
-            2.
-            3.
-            4. 
         
-         Animations
-            1.
-            2.
+         Layouts 
+                          https://github.com/AbeethaHeshan/MyProfile/tree/master/MyProjects/css/%20Layouts
+        
+         Transitions  $   Animations
+                          https://github.com/AbeethaHeshan/MyProfile/tree/master/MyProjects/css/Transitions%26animations
+       
+            
                  
                   
           
