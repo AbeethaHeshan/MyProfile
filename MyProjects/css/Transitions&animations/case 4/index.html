@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case4 (Water Drop.)</title>
+
+    <style>
+        .container{
+            position: relative;
+            height: 95vh;
+
+        }
+        #box{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+
+        }
+
+        #c4{
+            border: 2px solid red;
+            border-radius: 100%;
+            height: 50px;
+            width:50px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            animation: water-bubble 1s;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes water-bubble {
+             0%{
+                 height: 70px;
+                 width:70px;
+                 border-color: #E51500;
+
+             }
+            20%{
+                height: 90px;
+                width:90px;
+
+            }
+            40%{
+                height: 110px;
+                width:110px;
+
+            }
+            60%{
+                height: 130px;
+                width:130px;
+            }
+            80%{
+                height: 150px;
+                width:150px;
+            }
+
+            90%{
+                height: 170px;
+                width:170px;
+                border-color: #ff1495;
+
+            }
+            100%{
+                height: 190px;
+                width:190px;
+                border-color: transparent;
+            }
+
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+         <div id="box">
+
+             <!--<div id="c1">
+                 <div id="c2">
+                     <div id="c3">-->
+                         <div id="c4">
+
+                         </div>
+               <!--      </div>
+                 </div>
+             </div>-->
+         </div>
+    </section>
+
+</body>
+</html>

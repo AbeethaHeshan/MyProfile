@@ -1,0 +1,87 @@
+main>.project{
+    height: 500px;
+    position: relative;
+
+}
+
+.my-projects{
+    position: relative;
+    height: 300px;
+    width:700px;
+
+    top: 100px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+
+.my-projects >div{
+
+    height: 300px;
+    width: 300px;
+
+    border-radius: 0 53px 73px 53px;
+    background: rgba(184, 214, 231, 0.51);
+    box-shadow: 4px 6px 7px 1px #60a6cbb9;
+}
+ /*small circles*/
+.my-projects >div >div:nth-child(2){
+    position: relative;
+    top: -44px;
+    left: -29px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+
+    z-index: 2;
+    background: #7b8d85;
+}
+
+.my-projects >div >h3{
+      color: #191a3e;
+      position: relative;
+      height: 20px;
+      width: 50px;
+      top: 5px;
+      left: -15px;
+      right: 0;
+      margin: auto;
+
+}
+
+.project > h2{
+    position: absolute;
+    top: 31px;
+    left: 79px;
+    margin: auto;
+    font-size: 40px;
+}
+
+.my-projects >div >div >h3{
+
+    position: relative;
+    top: 12px;
+    margin: auto;
+    width: 15px;
+    font-size:25px;
+}
+
+#pics{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    top: -38px;
+    left: 22px;
+}
+#pics> img{
+    width: 120px;
+    height: 120px;
+
+
+}
