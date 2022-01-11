@@ -9,7 +9,25 @@
      mockup       |  https://www.figma.com/file/zYKPWZPompGulwCxlTVotS/Untitled?node-id=407%3A2
      gloomaps     |  https://www.gloomaps.com/KbsxtdgQ9F   
      
-          
+     
+     Assignments
+         Layouts 
+            1.   
+            2.
+            3.
+            4.
+            
+         Transitions 
+            1.   
+            2.
+            3.
+            4. 
+        
+         Animations
+            1.
+            2.
+                 
+                  
           
      
      
