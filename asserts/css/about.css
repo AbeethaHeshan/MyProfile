@@ -348,7 +348,7 @@
 
 }
 
-@media all and (min-device-width: 425px) and (max-device-width: 620px) and (max-device-width: 768px) {
+@media all and (min-device-width: 425px) and (max-device-width: 620px) {
     /*S[eech boble*/
     .aboutMe > #img-speech {
         display: none;

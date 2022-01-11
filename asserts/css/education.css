@@ -162,9 +162,9 @@
 /* topic*/
 .education >h3{
     position: absolute;
-    left: 35px;
-    top:10px;
-    font-size: 40px;
+    right: 100px;
+    top: 10px;
+    font-size: 50px;
 }
 
 
@@ -438,6 +438,453 @@
         width: 70px;
 
     }
+
+
+}
+@media all and (min-device-width: 425px) and (max-device-width: 620px){
+    /* topic*/
+    .education >h3{
+        height: 35px;
+        width: max-content;
+        left: 0;
+        right: 0;
+        top: 14px;
+        font-size: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+    }
+
+    /*main 3 boxes*/
+    .education > #edu >div{
+        position: relative;
+        width: 310px;
+        height: 35px;
+        border-radius: 28px 11px 45px 11px;
+        /* background: rgba(105, 149, 170, 0.51); */
+        box-shadow: 4px 6px 7px 1px #60a6cbb9;
+    }
+
+    #main-box-1{
+        top: 94px;
+        left: 44px;
+    }
+
+    #main-box-2{
+        margin: 0;
+        top: 153px;
+        left: 49px;
+
+    }
+
+    #main-box-3{
+        top: 220px;
+        left: 46px;
+    }
+
+    /*circles*/
+    #edu >div >div {
+
+        height: 40px;
+        width: 40px;
+        top: -19px;
+        left: -14px;
+    }
+
+    /*institute images*/
+    #edu>div>div>img{
+        height: 20px;
+        position: relative;
+        top: 7px;
+        bottom: 0;
+        left: 6px;
+    }
+    #edu>#main-box-1>div>img{
+
+        top: 11px;
+        bottom: 0;
+        left: 4px;
+    }
+    #edu>#main-box-2>div>img{
+        height: 27px;
+        top: 7px;
+        bottom: 0;
+        left: 7px;
+    }
+    #edu>#main-box-3>div>img{
+        height: 25px;
+        top: 7px;
+        bottom: 0;
+        left: 6px;
+    }
+
+    /*text */
+    .education > #edu >div>h3:nth-child(2){
+        font-size: 10px;
+        position: absolute;
+        color:#365267;
+        left: 45px;
+        top: 12px;
+        margin: auto;
+
+    }
+
+
+    /*main picture box*/
+    .education > #main-img {
+
+
+        position: absolute;
+        right: 50px;
+        bottom: 23px;
+        margin: auto;
+        width: 300px;
+        height:300px;
+    }
+
+
+    /* main image*/
+    .education > #main-img >div:nth-child(1) >img{
+        position: absolute;
+        height: 304px;
+        width: 313px;
+        margin: 0;
+        top: 41px;
+        left: -11px;
+        z-index: 2;
+    }
+
+    /*bush*/
+    #main-img > div:nth-child(3){
+        position: absolute;
+        left: 48px;
+        bottom: 64px;
+        margin: auto;
+        height: 70px;
+        width: 70px;
+    }
+
+    #main-img > div:nth-child(3)>img{
+        position: absolute;
+        left: -24px;
+        bottom: -4px;
+        margin: auto;
+        height: 70px;
+        width: 70px;
+
+    }
+
+
+}
+
+@media all and (min-device-width: 620px) and (max-device-width: 768px) {
+    /* topic*/
+    .education >h3{
+        height: 35px;
+        width: max-content;
+        left: 0;
+        right: 0;
+        top: 14px;
+        font-size: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+    }
+
+    /*main 3 boxes*/
+    .education > #edu >div{
+        position: relative;
+        width: 310px;
+        height: 35px;
+        border-radius: 28px 11px 45px 11px;
+        /* background: rgba(105, 149, 170, 0.51); */
+        box-shadow: 4px 6px 7px 1px #60a6cbb9;
+    }
+
+    #main-box-1{
+        top: 94px;
+        left: 44px;
+    }
+
+    #main-box-2{
+        margin: 0;
+        top: 153px;
+        left: 49px;
+
+    }
+
+    #main-box-3{
+        top: 220px;
+        left: 46px;
+    }
+
+    /*circles*/
+    #edu >div >div {
+
+        height: 40px;
+        width: 40px;
+        top: -19px;
+        left: -14px;
+    }
+
+    /*institute images*/
+    #edu>div>div>img{
+        height: 20px;
+        position: relative;
+        top: 7px;
+        bottom: 0;
+        left: 6px;
+    }
+    #edu>#main-box-1>div>img{
+
+        top: 11px;
+        bottom: 0;
+        left: 4px;
+    }
+    #edu>#main-box-2>div>img{
+        height: 27px;
+        top: 7px;
+        bottom: 0;
+        left: 7px;
+    }
+    #edu>#main-box-3>div>img{
+        height: 25px;
+        top: 7px;
+        bottom: 0;
+        left: 6px;
+    }
+
+    /*text */
+    .education > #edu >div>h3:nth-child(2){
+        font-size: 10px;
+        position: absolute;
+        color:#365267;
+        left: 45px;
+        top: 12px;
+        margin: auto;
+
+    }
+
+
+    /*main picture box*/
+    .education > #main-img {
+
+
+        position: absolute;
+        right: 50px;
+        bottom: 23px;
+        margin: auto;
+        width: 300px;
+        height:300px;
+    }
+
+
+    /* main image*/
+    .education > #main-img >div:nth-child(1) >img{
+        position: absolute;
+        height: 304px;
+        width: 313px;
+        margin: 0;
+        top: 41px;
+        left: -11px;
+        z-index: 2;
+    }
+
+    /*bush*/
+    #main-img > div:nth-child(3){
+        position: absolute;
+        left: 48px;
+        bottom: 64px;
+        margin: auto;
+        height: 70px;
+        width: 70px;
+    }
+
+    #main-img > div:nth-child(3)>img{
+        position: absolute;
+        left: -24px;
+        bottom: -4px;
+        margin: auto;
+        height: 70px;
+        width: 70px;
+
+    }
+
+
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px){
+
+    .education{
+        position: relative;
+        height: 620px;
+        background:#dee3e4 ;
+    }
+    /*main picture box*/
+    .education > #main-img {
+
+
+        position: absolute;
+        right: 50px;
+        bottom: 23px;
+        margin: auto;
+        width: 511px;
+        height: 440px;
+    }
+    /* main image*/
+    .education > #main-img >div:nth-child(1) >img{
+        position: absolute;
+        height: 450px;
+        width: 569px;
+        margin: 0;
+        top: 19px;
+        left: -16px;
+        z-index: 2;
+    }
+
+    /*bush*/
+    #main-img > div:nth-child(3){
+        position: absolute;
+        left: 28px;
+        bottom: 117px;
+        margin: auto;
+        height: 150px;
+        width: 150px;
+    }
+
+    #main-img > div:nth-child(3)>img{
+        position: absolute;
+        left: 12px;
+        bottom: -1px;
+        margin: auto;
+        height: 150px;
+        width: 150px;
+    }
+
+
+
+
+    /*main 3 boxes*/
+    .education > #edu >div{
+        position: relative;
+        width: 390px;
+        height: 46px;
+        border-radius:28px 11px 45px 11px ;
+
+        /*  background: rgba(105, 149, 170, 0.51);*/
+        box-shadow: 4px 6px 7px 1px #60a6cbb9;
+    }
+    #main-box-1{
+        position: absolute;
+        top: 50px;
+        left: 21px;
+        right: 0;
+        margin: auto;
+
+    }
+    #main-box-2{
+        position: absolute;
+        top: 151px;
+        left: -198px;
+        margin: auto;
+    }
+
+    #main-box-3{
+        position: absolute;
+        top: 282px;
+        left: -155px;
+        margin: auto;
+
+
+
+    }
+    /*circles*/
+    #edu >div >div {
+
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        top: -27px;
+        left: -21px;
+        margin: auto;
+
+
+
+    }
+
+    #main-box-1>div{
+        background: #C4C4C4;
+
+    }
+    #main-box-2>div{
+        background: #C4C4C4;
+
+    }
+    #main-box-3>div{
+        background: #C4C4C4;
+
+    }
+
+
+    /*text */
+    .education > #edu >div>h3:nth-child(2){
+        font-size: 13px;
+        position: relative;
+        color: #365267;
+        left: 45px;
+        top: 15px;
+
+    }
+
+    #main-box-1>h3{
+
+
+    }
+    #main-box-2>h3{
+
+
+    }
+    #main-box-3>h3{
+
+
+    }
+
+
+    /*institute images*/
+    #edu>div>div>img{
+        position: relative;
+        top: 7px;
+        bottom: 0;
+        left: 6px;
+    }
+    #edu>#main-box-1>div>img{
+        top: 12px;
+        bottom: 0;
+        left: 6px;
+    }
+    #edu>#main-box-2>div>img{
+        top: 6px;
+        bottom: 0;
+        left: 8px;
+    }
+    #edu>#main-box-3>div>img{
+        top: 7px;
+        bottom: 0;
+        left: 4px;
+    }
+
+
+
+    /* topic*/
+    .education >h3{
+        position: absolute;
+        right: 100px;
+        top: -56px;
+        font-size: 41px;
+    }
+
 
 
 }

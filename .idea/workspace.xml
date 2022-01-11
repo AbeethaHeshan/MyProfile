@@ -20,14 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8341a71b-d2a3-4685-9135-382b28f1599f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/asserts/css/education.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asserts/images/SectionFour/StudentImage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asserts/images/SectionFour/bulb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asserts/images/SectionFour/bush-pic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asserts/images/SectionFour/dudlry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asserts/images/SectionFour/gdse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asserts/images/SectionFour/gnanodaya.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asserts/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/asserts/css/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asserts/css/education.css" beforeDir="false" afterPath="$PROJECT_DIR$/asserts/css/education.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +95,7 @@
       <workItem from="1641645458863" duration="30717000" />
       <workItem from="1641706884186" duration="25403000" />
       <workItem from="1641809517121" duration="16988000" />
-      <workItem from="1641841423013" duration="7976000" />
+      <workItem from="1641841423013" duration="13061000" />
     </task>
     <servers />
   </component>
