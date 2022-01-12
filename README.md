@@ -12,20 +12,13 @@
      
      Assignments
          Layouts 
-            1.   
-            2.
-            3.
-            4.
+         
             
          Transitions 
-            1.   
-            2.
-            3.
-            4. 
+        
         
          Animations
-            1.
-            2.
+         
                  
                   
           
