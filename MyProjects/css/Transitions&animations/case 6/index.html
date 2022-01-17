@@ -5,85 +5,93 @@
     <title>case moving car</title>
 
     <style>
-        body{
+         body{
+             overflow: hidden;
+             position: relative;
+             height: 95vh;
+         }
+         #sky{
             position: relative;
-            border:2px solid #E51500;
-            height: 620px;
-        }
-        #sky{
-            border: 2px solid #1b364b;
-            position: relative;
-            height: 424px;
+            height: 70vh;
+            overflow: hidden;
+             background-repeat: repeat-x;
+            background-image: url("sky.jpg");
+         }
+
+        #city{
+            position: absolute;
+            height:260px;
+            width: 200%;
+            bottom: 145px;
+            background-repeat: repeat-x;
+            background-image: url("city.png");
+            z-index: 3;
+            animation: city 10s linear infinite;
 
         }
         #road{
-            border: 2px solid #0d171f;
-            position: relative;
-            height:200px;
-            bottom: 3px;
-            margin: auto;
-
-            animation: 10s run;
-            animation-iteration-count: infinite;
-
-        }
-        #sky>img:nth-child(1){
-              height: 620px;
-              width: 1500px;
-
-
-
-        }
-        #sky>img:nth-child(2){
+            overflow: hidden;
             position: absolute;
-            bottom: 2px;
-            left: 0;
-            margin: auto;
-            height: 274px;
-            width: max-content;
-
-            animation: 10s run;
-            animation-iteration-count: infinite;
+            height:153px;
+            width: 500%;
+            bottom: 0;
+            background-repeat: repeat-x;
+            background-image: url("road.jpg");
+            animation: road 2s linear infinite;
         }
-        #road>img{
-            height:200px;
-        }
-
-     #car{
-         border: 2px solid #0d171f;
-         position: absolute;
-         bottom: 120px;
-         left: 0;
-         right: 20px;
-         margin: auto;
-         height: 150px;
-         width: 400px;
-     }
-        #car>img{
+        #car{
+            position: absolute;
             height: 150px;
+            width: 400px;
+            bottom: 100px;
+            left:300px;
+            background-image: url("car.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 4;
         }
 
-        #car>img:nth-child(2){
+        #tyre-1{
             position: absolute;
-            height: 60px;
-            margin: auto;
-            left: 34px;
-            bottom: 7px;
-        }
-        #car>img:nth-child(3){
-            height: 60px;
-            position: absolute;
-            bottom: 6px;
-            margin: auto;
-            right: 85px;
+            height: 70px;
+            width: 70px;
+            bottom: -16px;
+            background-image: url(wheel.png);
+            background-size: cover;
+            left: 35px;
+
+            animation: tyres 10s linear infinite;
         }
 
-        @keyframes run {
-             from{
-                 transform: translate(0);
+        #tyre-2{
+            position: absolute;
+            height: 70px;
+            width:70px;
+            bottom: -20px;
+            background-image: url(wheel.png);
+            background-size: cover;
+            right: 47px;
+            animation: tyres 10s infinite;
+
+        }
+
+        @keyframes road {
+              to{
+                transform: translateX(-200px);
+              }
+        }
+         @keyframes city{
+             to{
+                 transform: translateX(-200px);
              }
+         }
+
+        @keyframes tyres {
+            from{
+                transform: rotate(360deg);
+            }
             to{
-                transform: translate(-100%);
+                transform: rotate(710deg);
             }
         }
 
@@ -91,18 +99,27 @@
 
 </head>
 <body>
-    <div id="sky">
-        <img src="sky.jpg">
-        <img src="city.png">
-    </div>
-    <div id="road">
-        <img src="road.jpg">
-    </div>
-    <div id="car">
-          <img src="car.png">
-          <img src="wheel.png">
-          <img src="wheel.png">
-    </div>
+
+   <!--sky-->
+<div id="sky">
+</div>
+
+
+   <!--city-->
+<div id="city">
+
+</div>
+
+   <!--road-->
+<div id="road">
+
+</div>
+
+    <!--car-->
+<div id="car">
+       <div id="tyre-1"></div>
+       <div id="tyre-2"></div>
+</div>
 
 </body>
 </html>
