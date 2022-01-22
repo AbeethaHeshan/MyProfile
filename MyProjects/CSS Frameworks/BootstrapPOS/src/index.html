@@ -3,10 +3,11 @@
      <head>
          <title>Home</title>
           <meta charset="utf-8">
+          <script src="asserts/Bootstrap/js/bootstrap.bundle.min.js"> </script> 
           <link rel="stylesheet" href="asserts/Bootstrap/css/bootstrap.min.css">
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <link rel="icon" href="asserts/images/navBar/BarandIcon.png">
-
+          
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Audiowide&display=swap" rel="stylesheet">
@@ -92,11 +93,11 @@
               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <div class="modal-header"style="height: 40px;" >
+                      <h5 class="modal-title" id="staticBackdropLabel" ></h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body " style="height:200px; position: relative;">
 
                                     <!-- login -->
                       <div class="d-flex justify-content-center">
@@ -109,29 +110,45 @@
                     
                     
                       <div class=" d-flex align-items-center flex-column">
-                      <div class="col-sm-6 ">
-                        <input type="text" class="form-control  h-25 m-1" placeholder="UserName" aria-label="UserName">
-                      </div>
-                      <div class="col-sm-6">
-                        <input type="password" class="form-control h-25 m-1" id="Password" placeholder="Password">
-                       </div> 
+                         <div class="d-flex justify-content-center align-items-center">
+                         
+                           <img src="asserts/images/navBar/Name.png " height="31px">
+                           <input type="text" class="form-control  h-25 m-1 " placeholder="UserName" aria-label="UserName">
+                        </div>
+                        <div class="d-flex justify-content-center  align-items-center">
+                            <img src="asserts/images/navBar/Password.png" height="30px">
+                            <input type="password" class="form-control h-25 m-1" id="Password" placeholder="Password">
+                        </div> 
                      </div>  
-                     
-
-
+                    
                     </div> 
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Login</button>
+                    <div class="d-flex d-flex justify-content-end  align-items-baseline position-absolute" style="top:130px;bottom: 0;left: 254px;right: 0 ;margin: auto; width: 60px;height: 30px;;"  >
+                      <button type="button" class="btn btn-outline-secondary btn-sm m-1 ">Signup</button>
+                      <button type="button " class="btn btn-primary btn-sm m-1" > Login</button>
+                     
                     </div>
+                    <div class="d-flex align-items-baseline justify-content-end btn" style="width: 63px; height: 45px;;">
+                      <img src="asserts/images/navBar/Settings.png" alt="" height="30px" width="30px" tabindex="0" data-bs-toggle="tooltip" title="settings"   data-bs-placement="top"  >
+                   
+              
+                    </div>
+
+
+                        
+                     
                   </div>
                 </div>
               </div>
-
-
+            
+              
          </section>  
-
-     
+                
+         <script>
+          var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')) 
+          var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)})
+        </script>
          <script src="asserts/Bootstrap/js/bootstrap.min.js"></script>
+         <script src="asserts/Bootstrap/js/bootstrap.bundle.min.js"></script>
      </body>
 </html>
