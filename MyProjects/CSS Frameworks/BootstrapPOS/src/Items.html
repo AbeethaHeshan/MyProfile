@@ -88,7 +88,7 @@
                 
               </nav>   
          </header>
-         <section id="main"style="height:95vh;" >
+         <section id="main"style="height:80vh;" >
               <!-- Modal  User-->
               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -140,7 +140,134 @@
                 </div>
               </div>
           
-          
+                <!-- Section -->
+              <!-- name -->
+              <div> </div>
+              <!-- container -->
+              <div class="position-relative" style="height: 80vh;width: 60vw;top: 84px;margin: auto;">
+                 <!-- search -->
+                 <div class="d-flex justify-content-center position-relative" style="width: 350px;margin: auto;top: 50px;"> 
+                 
+                 
+                    <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary btn-sm" type="submit">Search</button>
+                 
+  
+                 </div>  
+                 <!-- new -->
+                 <div class="d-flex justify-content-end position-relative" style="top:150px; right: 25px;">
+                     <button class=" btn btn-sm" data-bs-toggle="modal" data-bs-target="#AddCustomer" type="button" data-bs-toggle="button" style="text-align: start; color:white ; width: 80px; background-image: url(asserts/images/customer/Add.png);background-color:#07BD3A ; background-repeat: no-repeat;background-size: 28px 28px;background-position: 45px; font-weight: bold;"> New </button>
+  
+  
+                     <!-- Button trigger modal -->
+  
+                            <!-- Modal -->
+                            <div class="modal fade" id="AddCustomer" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                              <div class="modal-dialog position-relative " style="top: 150px;">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                       <img src="asserts/images/Items/Goods.png" height="40px">     <h5 class="modal-title" id="staticBackdropLabel">New Items</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+  
+                                                    <!-- New Customer  should mofify style-->
+
+                                                    <div class=" d-flex align-items-center flex-column">
+                                                        <div class="d-flex justify-content-center align-items-center">
+                                                          <input type="text" class="form-control  h-25 m-1 " placeholder="Item ID" aria-label="Item ID">
+                                                        </div>
+                                                       
+                                                        <div class="d-flex justify-content-center  align-items-center">
+    
+                                                          <input type="text" class="form-control  h-25 m-1 " placeholder="Description" aria-label="Description">
+                                                       
+                                                        </div> 
+    
+                                                        <div class="d-flex justify-content-center  align-items-center">
+    
+                                                          <input type="text" class="form-control  h-25 m-1 " placeholder="Quntity" aria-label="Quntity">
+                                                       
+                                                        </div> 
+    
+                                                        <div class="d-flex justify-content-center  align-items-center">
+    
+                                                          <input type="text" class="form-control  h-25 m-1 " placeholder="UnitPrice" aria-label="UnitPrice">
+                                                       
+                                                        </div> 
+    
+  
+                                                  </div> 
+                                            
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+  
+  
+                             
+                 </div>
+                 <!-- custom -->
+                 
+                 <div class="btn-group position-relative" role="group" aria-label="Basic example" style="left: 25px;top:118px">
+                    <button type="button" class="btn btn-sm"style="background-color: #DF3E3E;color: white;">Delete</button>
+                    <button type="button" class="btn btn-sm " style="background-color: #E27E21;color: white;">Update</button>
+                    <button type="button" class="btn btn-sm"style="background-color: #0E9199;color: white;">View  </button>
+                  </div>
+  
+                 <!-- table -->
+                
+                  <table class="table position-relative" style="top: 135px;">
+                    <thead>
+                        <tr  style="background-color: rgb(89, 146, 233); color: rgb(255, 255, 255);text-align: center;" >
+                        <th scope="col">Item ID</th>
+                        <th scope="col"> Descrifption</th>
+                        <th scope="col">Quntity</th>
+                        <th scope="col">UnitPrice</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      
+                   
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        
+                       
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      
+                       
+                      </tr>
+  
+                    </tbody>
+                  </table>
+  
+              </div>
+                
+  
 
             
         

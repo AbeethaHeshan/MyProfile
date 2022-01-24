@@ -1,164 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-     <head>
-         <title>Orders</title>
-          <meta charset="utf-8">
-          <script src="asserts/Bootstrap/js/bootstrap.bundle.min.js"> </script> 
-          <link rel="stylesheet" href="asserts/Bootstrap/css/bootstrap.min.css">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link rel="icon" href="asserts/images/navBar/BarandIcon.png">
-          
-          <link rel="preconnect" href="https://fonts.googleapis.com">
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-          <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Audiowide&display=swap" rel="stylesheet">
 
-          <style>
-              #headder-Notify>div{
-                      width: 50px;
-              } 
-              #headder-Notify>div>p{
-                     position: relative;
-                     height: 20px;
-                     bottom: 3px;
-              }
-              
-             
-          </style>
+<head>
+  <title>Orders</title>
+  <meta charset="utf-8">
+  <script src="asserts/Bootstrap/js/bootstrap.bundle.min.js"> </script>
+  <link rel="stylesheet" href="asserts/Bootstrap/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="asserts/images/navBar/BarandIcon.png">
 
-     </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Audiowide&display=swap" rel="stylesheet">
 
-     <body>  
-         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light py-lg-1  shadow p-3 mb-0 bg-white rounded   ">
-                <div class="container-fluid">
-                  <a class="navbar-brand  d-flex align-items-center"  href="#"  style="height: 50px;" >
-                        <img src="asserts/images/navBar/BarandIcon.png" width="37px" height="37px" class="d-inline-block align-top" alt=""> 
-                         <div class="position-relative">
-                            <p  style="font-family:'Aladin',cursive ;font-size: 20px ;top:6px;" class="m-0 p-0 text-info position-relative ">The Kade</p>
-                            <p style="color: #3179C6 ; font-family:'Audiowide',cursive; bottom: 5px;" class="m-0 p-0 position-relative d">POS System</p>
-                         </div>             
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">  </span>
-                  </button>
-                 
-                    <div class="collapse navbar-collapse  " id="navbarSupportedContent">
-                    <ul class=" navbar-nav m-auto  mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Items</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#">Orders</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link " href="customer.html">Customers</a>
-                      </li>
-                    </ul>
-                    <div class="btn data-toggle=button  d-flex " style="height: 50px; font-size: small;" id="headder-Notify">
-                       
-                      <!-- Button trigger modal -->
-                      <div  data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <img src="asserts/images/navBar/User.png" alt="" height="30px"> <p>User</p> </div>
-                       
-                      
+  <style>
+    #headder-Notify>div {
+      width: 50px;
+    }
 
-                      <!--   Alert   -->
-                      <div class="position-relative ">
-                            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger "> <p class="m-0 p-0 ">+99 </p>
-                               <span class="visually-hidden">
-                                 unread messages
-                               </span>
-                            </span>
-                          
-                         <img src="asserts/images/navBar/Alerts.png" alt=""height="30px"   class="dropdown-toggle" data-bs-toggle="dropdown"  aria-expanded="false" > 
-                          <P>Alert</P> 
+    #headder-Notify>div>p {
+      position: relative;
+      height: 20px;
+      bottom: 3px;
+    }
+  </style>
 
-                      
-                          
+</head>
 
-                        </div>  
-                        <div> <img src="asserts/images/navBar/Logout.png" alt=""height="30px" > <p>Logout</p> </div> 
-                           
-                    </div>
-                  </div>
-            
-                </div>
-                
-              </nav>   
-         </header>
-         <section id="main"style="height:95vh;" >
-              <!-- Modal  User-->
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header"style="height: 40px;" >
-                      <h5 class="modal-title" id="staticBackdropLabel" ></h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body " style="height:200px; position: relative;">
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-lg-1  shadow p-3 mb-0 bg-white rounded   ">
+      <div class="container-fluid">
+        <a class="navbar-brand  d-flex align-items-center" href="#" style="height: 50px;">
+          <img src="asserts/images/navBar/BarandIcon.png" width="37px" height="37px" class="d-inline-block align-top"
+            alt="">
+          <div class="position-relative">
+            <p style="font-family:'Aladin',cursive ;font-size: 20px ;top:6px;"
+              class="m-0 p-0 text-info position-relative ">The Kade</p>
+            <p style="color: #3179C6 ; font-family:'Audiowide',cursive; bottom: 5px;"
+              class="m-0 p-0 position-relative d">POS System</p>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"> </span>
+        </button>
 
-                                    <!-- login -->
-                      <div class="d-flex justify-content-center">
-                        <img src="asserts/images/navBar/BarandIcon.png" width="40px" height="40px" class="d-inline-block align-top" alt=""> 
-                        <div class="position-relative">
-                           <p  style="font-family:'Aladin',cursive ;font-size: 20px ;top:2px;left:0px;" class="m-0 p-0 text-info position-relative ">The Kade</p>
-                           <p style="color: #3179C6 ; font-family:'Audiowide',cursive; bottom: 9px;" class="m-0 p-0 position-relative fs-6">POS System</p>
-                        </div> 
-                      </div>
-                    
-                    
-                      <div class=" d-flex align-items-center flex-column">
-                         <div class="d-flex justify-content-center align-items-center">
-                         
-                           <img src="asserts/images/navBar/Name.png " height="31px">
-                           <input type="text" class="form-control  h-25 m-1 " placeholder="UserName" aria-label="UserName">
-                        </div>
-                        <div class="d-flex justify-content-center  align-items-center">
-                            <img src="asserts/images/navBar/Password.png" height="30px">
-                            <input type="password" class="form-control h-25 m-1" id="Password" placeholder="Password">
-                        </div> 
-                     </div>  
-                    
-                    </div> 
-                    <div class="d-flex d-flex justify-content-end  align-items-baseline position-absolute" style="top:130px;bottom: 0;left: 254px;right: 0 ;margin: auto; width: 60px;height: 30px;;"  >
-                        <button type="button" class="btn btn-outline-secondary btn-sm m-1 ">Signup</button>
-                        <button type="button " class="btn btn-primary btn-sm m-1" > Login</button>
-                      
-                    </div>
-                    <div class="d-flex align-items-baseline justify-content-end btn" style="width: 63px; height: 45px;;">
-                      
-                      <img src="asserts/images/navBar/Settings.png" alt="" height="30px" width="30px" tabindex="0" data-bs-toggle="tooltip" title="settings"   data-bs-placement="top"  >
-                  
-                    </div>
+        <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+          <ul class=" navbar-nav m-auto  mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Items</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Orders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="customer.html">Customers</a>
+            </li>
+          </ul>
+          <div class="btn data-toggle=button  d-flex " style="height: 50px; font-size: small;" id="headder-Notify">
+
+            <!-- Button trigger modal -->
+            <div data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <img src="asserts/images/navBar/User.png"
+                alt="" height="30px">
+              <p>User</p>
+            </div>
 
 
-                        
-                     
-                  </div>
-                </div>
+
+            <!--   Alert   -->
+            <div class="position-relative ">
+              <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger ">
+                <p class="m-0 p-0 ">+99 </p>
+                <span class="visually-hidden">
+                  unread messages
+                </span>
+              </span>
+
+              <img src="asserts/images/navBar/Alerts.png" alt="" height="30px" class="dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false">
+              <P>Alert</P>
+
+
+
+
+            </div>
+            <div> <img src="asserts/images/navBar/Logout.png" alt="" height="30px">
+              <p>Logout</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </nav>
+  </header>
+  <section id="main" style="height:80vh;">
+    <!-- Modal  User-->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="height: 40px;">
+            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body " style="height:200px; position: relative;">
+
+            <!-- login -->
+            <div class="d-flex justify-content-center">
+              <img src="asserts/images/navBar/BarandIcon.png" width="40px" height="40px"
+                class="d-inline-block align-top" alt="">
+              <div class="position-relative">
+                <p style="font-family:'Aladin',cursive ;font-size: 20px ;top:2px;left:0px;"
+                  class="m-0 p-0 text-info position-relative ">The Kade</p>
+                <p style="color: #3179C6 ; font-family:'Audiowide',cursive; bottom: 9px;"
+                  class="m-0 p-0 position-relative fs-6">POS System</p>
               </div>
+            </div>
 
 
-              <!-- model Alert -->
-            
-         </section>  
-         <section>
-            
-                
-         </section>       
-        
-        
-       
-       
-       
-       <script>
-          var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')) 
-          var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl)})
-         </script>
-         <script src="asserts/Bootstrap/js/bootstrap.min.js"></script>
-    
-     </body>
+            <div class=" d-flex align-items-center flex-column">
+              <div class="d-flex justify-content-center align-items-center">
+
+                <img src="asserts/images/navBar/Name.png " height="31px">
+                <input type="text" class="form-control  h-25 m-1 " placeholder="UserName" aria-label="UserName">
+              </div>
+              <div class="d-flex justify-content-center  align-items-center">
+                <img src="asserts/images/navBar/Password.png" height="30px">
+                <input type="password" class="form-control h-25 m-1" id="Password" placeholder="Password">
+              </div>
+            </div>
+
+          </div>
+          <div class="d-flex d-flex justify-content-end  align-items-baseline position-absolute"
+            style="top:130px;bottom: 0;left: 254px;right: 0 ;margin: auto; width: 60px;height: 30px;;">
+            <button type="button" class="btn btn-outline-secondary btn-sm m-1 ">Signup</button>
+            <button type="button " class="btn btn-primary btn-sm m-1"> Login</button>
+
+          </div>
+          <div class="d-flex align-items-baseline justify-content-end btn" style="width: 63px; height: 45px;;">
+
+            <img src="asserts/images/navBar/Settings.png" alt="" height="30px" width="30px" tabindex="0"
+              data-bs-toggle="tooltip" title="settings" data-bs-placement="top">
+
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Orders -->
+    <!-- main -->
+    <div class="container  position-relative  justify-content-center "
+      style="width:95vw;height: 75vh;top: 100px;margin: auto; border: 2px solid red;">
+
+
+      <div class="row">
+        <!-- invoive details -->
+        <div class="card m-2 col">
+          <div class=card-header>Invoice Details</div>
+
+          <div class="card-body ">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+
+        </div>
+
+        <!-- Item Select -->
+        <div class="card m-2 col">
+          <div class=card-header> Item Select</div>
+
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <!-- cost -->
+        <div class="card m-2 col">
+          <div class=card-header></div>
+
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <section>
+
+
+  </section>
+
+
+
+
+
+  <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
+  <script src="asserts/Bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
 </html>
