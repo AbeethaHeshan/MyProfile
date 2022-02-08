@@ -19,14 +19,10 @@
                     $('body').mousemove(function(event){
                         X = event.pageX;
                         Y = event.pageY;
+
+                        $('h1').css('transform',`translate(${X}px,${Y}px)`);    
                     });
 
-                    setInterval(pointerCheck,0.1);  // every 0.1 ms  check pointer x,y axis values
-                
-                    function pointerCheck() {
-                    
-                        $('h1').css('transform',`translate(${X}px,${Y}px)`);              
-                    }
 
             </script>
 </body>
