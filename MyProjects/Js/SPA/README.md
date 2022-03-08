@@ -25,7 +25,7 @@
 ```
 
 ### POS (SPA)
-* Direct link [DOM-MVC-InMemory-SPA](https://abeethaheshan.github.io/MyProfile/MyProjects/Js/SPA/DOM Manipulation With JS - 1/BootstrapPOS/src/)   
+* Direct link [DOM-MVC-InMemory-SPA](https://abeethaheshan.github.io/MyProfile/MyProjects/Js/SPA/DOM%20Manipulation%20With%20JS%20-%201/BootstrapPOS/src/)   
   
 
 
