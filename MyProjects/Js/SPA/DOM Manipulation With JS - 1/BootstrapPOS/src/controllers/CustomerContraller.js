@@ -177,18 +177,6 @@
         }
 
 
-        function updateSavedCustomer(){
-          const custId = $("#txtUpdateCustomerId").val();
-          const custName = $("#txtUpdateCustomerName").val();
-          const custAddress = $("#txtUpdateCustomerAddress").val();
-          const custNic = $("#txtUpdateCustomerNic").val();
-          const custTel = $("#txtUpdateCustomerTel").val();
-          
-          
-          var customerDTO = new CustomerDTO(custId,custName,custAddress,custNic,custTel);
-          customerDB.push(customerDTO);
-
-        }
 
 
 
@@ -196,6 +184,7 @@
            !   Save customer to the table
         */
         function loadCustomerToTable(){
+         
            $("#customerTable").empty();
           for (var i of customerDB) {
             /*create a html row*/
@@ -203,8 +192,18 @@
             /*select the table body and append the row */
             $("#customerTable").append(row);
           }
+           
            deleteCustomer();
+
+           console.log("A")
            updateCustomer();
+           console.log("B")
+
+
+      
+           
+
+
 
         }
 
@@ -262,12 +261,12 @@
            !   update customer in the table 
         */
          function updateCustomer(){
-
+          console.log("Update cistmer");
 
         // customer delete event
         $('.update').on('click', function() {
-          $("#btnSave").off("click");
-                    
+          
+       
 
                   var selectedRow = $(this).parents('tr');
                   var custId = $('td:nth-child(1)', selectedRow).text();   
@@ -280,66 +279,75 @@
 
 
           
-                  $('#AddCustomer').modal('show');
+                  $('#UpdateCustomer').modal('show');
                  
                   $('#btnSave').prop('disabled',false);
 
                  
-                  $("#txtCustomerId").val(custId);
-                  $("#txtCustomerName").val(custName);
-                  $("#txtCustomerAddress").val(custAddress);
-                  $("#txtCustomerNic").val(custNic);
-                  $("#txtCustomerTel").val(custTel);
+                  $("#txtUpdateCustomerId").val(custId);
+                  $("#txtUpdateCustomerName").val(custName);
+                  $("#txtUpdateCustomerAddress").val(custAddress);
+                  $("#txtUpdateCustomerNic").val(custNic);
+                  $("#txtUpdateCustomerTel").val(custTel);
 
-                   $('#btnSave').attr('id','btnUpdate')
                   $("#btnUpdate").on('click',function(){
-                  
+                    
+                         
                            for(var i = 0 ; i < customerDB.length ; i++){
-                                  if(customerDB[i].id ==  $("#txtCustomerId").val()){
-
-                                    customerDB[i].id = $("#txtCustomerId").val();
-                                    customerDB[i].name = $("#txtCustomerName").val();
-                                    customerDB[i].address = $("#txtCustomerAddress").val();
-                                    customerDB[i].nic = $("#txtCustomerNic").val();
-                                    customerDB[i].tel = $("#txtCustomerTel").val();
+                                  console.log(i, "click update"); 
+                                  if(customerDB[i].id ==  $("#txtUpdateCustomerId").val()){
+                                  
+                                    customerDB[i].id = $("#txtUpdateCustomerId").val();
+                                    customerDB[i].name = $("#txtUpdateCustomerName").val();
+                                    customerDB[i].address = $("#txtUpdateCustomerAddress").val();
+                                    customerDB[i].nic = $("#txtUpdateCustomerNic").val();
+                                    customerDB[i].tel = $("#txtUpdateCustomerTel").val();
                                      
                                     loadCustomerToTable();
-
                                     clearTextBoxes();
+                                  
+                                    console.log("click update"); 
+                                   
                                   }
                            }
-                     
-                           
-                  });
-                  
 
+                  });
+
+                  
+            
            });
          }
          
+          
+
+
+         /* 
+           !   Search customer in the table 
+        */
 
 
         
+          
+         
+         
+           
+
 
          
-          // customer save event
-          $("#btnSave").on('click',function(){
-           
-          saveCustomer();     
-          loadCustomerToTable();
-          clearTextBoxes();
+                  // customer save event
+               $("#btnSave").on('click',function(){
+                 console.log("click save");
+                      saveCustomer();  
+                      loadCustomerToTable();
+                      clearTextBoxes();
 
-
-          for (let index = 0; index < customerDB.length; index++) {
-            
-              console.log(customerDB[index].name," NAme");
-             
-          }
-         });
+               });
+          
 
 
 
 
-       
+              
 
 
   

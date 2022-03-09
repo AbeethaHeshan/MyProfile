@@ -3,7 +3,7 @@
 var customerDB = new Array();
 
 //item
-var itemArr = new Array();
+var itemDB = new Array();
 
 
 
