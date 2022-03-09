@@ -199,7 +199,7 @@
            $("#customerTable").empty();
           for (var i of customerDB) {
             /*create a html row*/
-            let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.nic}</td><td>${i.tel}</td><td>${i.address}</td><td> <button class="delete">delete</button>  <button class="update">Update</button></td></tr>`;
+            let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.address}</td><td>${i.nic}</td><td>${i.tel}</td><td> <button class="delete">delete</button>  <button class="update">Update</button></td></tr>`;
             /*select the table body and append the row */
             $("#customerTable").append(row);
           }
@@ -266,7 +266,9 @@
 
         // customer delete event
         $('.update').on('click', function() {
-          $("#btnUpdate").off("click");
+          $("#btnSave").off("click");
+                    
+
                   var selectedRow = $(this).parents('tr');
                   var custId = $('td:nth-child(1)', selectedRow).text();   
                   var custName = $('td:nth-child(2)', selectedRow).text();   
@@ -274,31 +276,40 @@
                   var custNic = $('td:nth-child(4)', selectedRow).text(); 
                   var custTel = $('td:nth-child(5)', selectedRow).text(); 
                   console.log(custId , custName , custAddress , custNic , custTel);
+
+
+
           
-                  $('#UpdateCustomer').modal('show');
+                  $('#AddCustomer').modal('show');
                  
                   $('#btnSave').prop('disabled',false);
 
-                  $("#txtUpdateCustomerId").val(custId);
-                  $("#txtUpdateCustomerName").val(custName);
-                  $("#txtUpdateCustomerAddress").val(custAddress);
-                  $("#txtUpdateCustomerNic").val(custNic);
-                  $("#txtUpdateCustomerTel").val(custTel);
+                 
+                  $("#txtCustomerId").val(custId);
+                  $("#txtCustomerName").val(custName);
+                  $("#txtCustomerAddress").val(custAddress);
+                  $("#txtCustomerNic").val(custNic);
+                  $("#txtCustomerTel").val(custTel);
 
-                
+                   $('#btnSave').attr('id','btnUpdate')
                   $("#btnUpdate").on('click',function(){
                   
                            for(var i = 0 ; i < customerDB.length ; i++){
-                                  if(customerDB[i].id ==  $("#txtUpdateCustomerId").val()){
+                                  if(customerDB[i].id ==  $("#txtCustomerId").val()){
 
-                                    customerDB[i].name = $("#txtUpdateCustomerName").val();
-                                    customerDB[i].address = $("#txtUpdateCustomerAddress").val();
-                                    customerDB[i].nic = $("#txtUpdateCustomerNic").val();
-                                    customerDB[i].tel = $("#txtUpdateCustomerTel").val();
+                                    customerDB[i].id = $("#txtCustomerId").val();
+                                    customerDB[i].name = $("#txtCustomerName").val();
+                                    customerDB[i].address = $("#txtCustomerAddress").val();
+                                    customerDB[i].nic = $("#txtCustomerNic").val();
+                                    customerDB[i].tel = $("#txtCustomerTel").val();
+                                     
+                                    loadCustomerToTable();
 
-                                     loadCustomerToTable();
+                                    clearTextBoxes();
                                   }
                            }
+                     
+                           
                   });
                   
 
