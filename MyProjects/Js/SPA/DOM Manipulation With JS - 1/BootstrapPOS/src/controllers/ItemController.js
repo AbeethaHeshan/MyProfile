@@ -124,6 +124,8 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
         $("#txtItemDescription").val('');
         $("#txtItemQuntity").val('');
         $("#txtItemUnitPrice").val('');
+        $('#btnSaveItem').prop('disabled',true);
+
     }
 
 
@@ -145,18 +147,7 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
         }
 
 
-    /* 
-      
-       ! Save data to the Array and save data to Table
 
-     */
-      
-       $('#btnSaveItem').on('click',function(){
-                  
-                   itemDB.push(collectItemData())
-                   loadItemTable();
-
-       });
 
 
 
@@ -173,6 +164,7 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
               }
 
               deleteItemRow();
+              updateItemDataRow();
 
         }
 
@@ -222,6 +214,82 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
         ! update data in row
 
         */
+         let updatePressed = false;
+         function updateItemDataRow(){
+            
+              $('.updateItem').on('click',function(){
+                      $('#AddItem').attr('id','btnUpdateItemData');
+                      $('#btnUpdateItemData').modal('show');
+                      $('#LabelItem').text('Update Item');
 
-        
+                       var Row = $(this).parents('tr');
+                       var itemId =  $('td:nth-child(1)', Row).text();
+                       var description = $('td:nth-child(2)', Row).text();
+                       var quntity = $('td:nth-child(3)', Row).text();
+                       var price = $('td:nth-child(4)', Row).text();
 
+
+                       $("#txtItemId").val(itemId);
+                       $("#txtItemDescription").val(description);
+                       $("#txtItemQuntity").val(quntity);
+                       $("#txtItemUnitPrice").val(price);
+                        
+                       updatePressed = true;
+
+                       $('#btnUpdateItemData').attr('id','AddItem');
+                      
+                 });
+
+              
+                
+                 return updatePressed;
+
+         }  
+
+
+
+    /* 
+      
+       ! Save/Update data to the Array and save data to Table
+
+     */
+      
+       $('#btnSaveItem').on('click',function(){
+                
+                    console.log('save button pressed')
+                   
+                       
+                //update data
+                if(updateItemDataRow() == true){
+                       console.log("yes")
+                      
+                        //update array
+
+                        for(i in itemDB){
+                            console.log($("#txtItemId").val(),"ASD")
+                            if(itemDB[i].id ==  $("#txtItemId").val()){
+
+                             
+                                     itemDB[i].id = $("#txtItemId").val();
+                                     itemDB[i].description = $("#txtItemDescription").val();
+                                     itemDB[i].quntity =  $("#txtItemQuntity").val();
+                                     itemDB[i].unitPrice =  $("#txtItemUnitPrice").val();
+                                     loadItemTable(); 
+                                     clearItemtxtBoxes();
+                            }
+                        }
+                          
+                       updatePressed = false;
+
+                }else{
+
+                    itemDB.push(collectItemData())
+                    loadItemTable();
+                    clearItemtxtBoxes();
+                }
+
+                    for(i of itemDB){
+                        console.log(i.id)
+                    }
+
+       });
