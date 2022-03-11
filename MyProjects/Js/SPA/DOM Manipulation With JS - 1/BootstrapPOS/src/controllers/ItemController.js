@@ -21,7 +21,7 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
       $('#btnSaveItem').prop('disabled', false);
        
       if(event.key == "Enter"){
-
+       
         $("#txtItemDescription").focus();
         $('#btnSaveItem').prop('disabled',true);
       }
@@ -193,7 +193,7 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
                                itemDB[i] = "";
                         }else{
                              
-                            tempItemDB.push(new ItemDTO(itemDB[i].id,itemDB[i].description,itemDB[i].quntity,itemDB[i].unitPrice))
+                            tempItemDB.push(new ItemDTO(itemDB[i].id,itemDB[i].description,itemDB[i].quentity,itemDB[i].unitPrice))
                         }
                    }
  
@@ -215,9 +215,14 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
 
         */
          let updatePressed = false;
+         var obj = 0;
          function updateItemDataRow(){
-            
+               
               $('.updateItem').on('click',function(){
+
+
+                      
+
                       $('#AddItem').attr('id','btnUpdateItemData');
                       $('#btnUpdateItemData').modal('show');
                       $('#LabelItem').text('Update Item');
@@ -227,21 +232,22 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
                        var description = $('td:nth-child(2)', Row).text();
                        var quntity = $('td:nth-child(3)', Row).text();
                        var price = $('td:nth-child(4)', Row).text();
-
+                       
+                       updatePressed = true;
 
                        $("#txtItemId").val(itemId);
                        $("#txtItemDescription").val(description);
                        $("#txtItemQuntity").val(quntity);
                        $("#txtItemUnitPrice").val(price);
                         
-                       updatePressed = true;
+                      
 
                        $('#btnUpdateItemData').attr('id','AddItem');
-                      
+ 
                  });
 
-              
                 
+
                  return updatePressed;
 
          }  
@@ -260,7 +266,7 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
                    
                        
                 //update data
-                if(updateItemDataRow() == true){
+                if(updateItemDataRow()){
                        console.log("yes")
                       
                         //update array
@@ -272,7 +278,7 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
                              
                                      itemDB[i].id = $("#txtItemId").val();
                                      itemDB[i].description = $("#txtItemDescription").val();
-                                     itemDB[i].quntity =  $("#txtItemQuntity").val();
+                                     itemDB[i].quentity =  $("#txtItemQuntity").val();
                                      itemDB[i].unitPrice =  $("#txtItemUnitPrice").val();
                                      loadItemTable(); 
                                      clearItemtxtBoxes();
@@ -280,16 +286,18 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
                         }
                           
                        updatePressed = false;
+                    
+
 
                 }else{
-
+                   
                     itemDB.push(collectItemData())
                     loadItemTable();
                     clearItemtxtBoxes();
                 }
 
                     for(i of itemDB){
-                        console.log(i.id)
+                        console.log(i.id )
                     }
 
        });

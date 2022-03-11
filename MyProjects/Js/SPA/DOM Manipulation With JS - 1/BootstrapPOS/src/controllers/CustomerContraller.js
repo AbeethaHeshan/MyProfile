@@ -260,14 +260,15 @@
          /* 
            !   update customer in the table 
         */
+         var bool = false;
          function updateCustomer(){
-          console.log("Update cistmer");
+         
 
         // customer delete event
         $('.update').on('click', function() {
           
        
-
+  
                   var selectedRow = $(this).parents('tr');
                   var custId = $('td:nth-child(1)', selectedRow).text();   
                   var custName = $('td:nth-child(2)', selectedRow).text();   
@@ -276,74 +277,69 @@
                   var custTel = $('td:nth-child(5)', selectedRow).text(); 
                   console.log(custId , custName , custAddress , custNic , custTel);
 
-
-
-          
-                  $('#UpdateCustomer').modal('show');
+                  $('#AddCustomer').modal('show');
+                  $('.modal-title').text('Update Customer');
                  
                   $('#btnSave').prop('disabled',false);
 
                  
-                  $("#txtUpdateCustomerId").val(custId);
-                  $("#txtUpdateCustomerName").val(custName);
-                  $("#txtUpdateCustomerAddress").val(custAddress);
-                  $("#txtUpdateCustomerNic").val(custNic);
-                  $("#txtUpdateCustomerTel").val(custTel);
+                  $("#txtCustomerId").val(custId);
+                  $("#txtCustomerName").val(custName);
+                  $("#txtCustomerAddress").val(custAddress);
+                  $("#txtCustomerNic").val(custNic);
+                  $("#txtCustomerTel").val(custTel);
 
-                  $("#btnUpdate").on('click',function(){
-                    
-                         
-                           for(var i = 0 ; i < customerDB.length ; i++){
-                                  console.log(i, "click update"); 
-                                  if(customerDB[i].id ==  $("#txtUpdateCustomerId").val()){
-                                  
-                                    customerDB[i].id = $("#txtUpdateCustomerId").val();
-                                    customerDB[i].name = $("#txtUpdateCustomerName").val();
-                                    customerDB[i].address = $("#txtUpdateCustomerAddress").val();
-                                    customerDB[i].nic = $("#txtUpdateCustomerNic").val();
-                                    customerDB[i].tel = $("#txtUpdateCustomerTel").val();
-                                     
-                                    loadCustomerToTable();
-                                    clearTextBoxes();
-                                  
-                                    console.log("click update"); 
-                                   
-                                  }
-                           }
-
-                  });
-
+                   
+                  bool = true;
                   
             
            });
+
+                
+                return bool;
          }
          
           
 
 
-         /* 
-           !   Search customer in the table 
-        */
 
-
-        
-          
-         
-         
-           
-
-
-         
-                  // customer save event
+                  // customer save/update  event
                $("#btnSave").on('click',function(){
-                 console.log("click save");
-                      saveCustomer();  
-                      loadCustomerToTable();
-                      clearTextBoxes();
+              
+                      if(updateCustomer() == true){
+                       
+                      for(var i = 0 ; i < customerDB.length ; i++){
+                          
+                          if(customerDB[i].id ==  $("#txtCustomerId").val()){
+                          
+                            customerDB[i].id = $("#txtCustomerId").val();
+                            customerDB[i].name = $("#txtCustomerName").val();
+                            customerDB[i].address = $("#txtCustomerAddress").val();
+                            customerDB[i].nic = $("#txtCustomerNic").val();
+                            customerDB[i].tel = $("#txtCustomerTel").val();
+                             
+                            loadCustomerToTable();
+                            clearTextBoxes();
+                          
+                    
+                          }
+                       }
+                            bool = false;
+                           
+                   }else{
+                       
+                        saveCustomer();  
+                        loadCustomerToTable();
+                        clearTextBoxes();
+
+                   }
+                     
+                     
 
                });
-          
+                  
 
+              
 
 
 
