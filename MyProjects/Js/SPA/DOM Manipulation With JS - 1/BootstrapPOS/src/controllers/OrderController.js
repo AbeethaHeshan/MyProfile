@@ -2,12 +2,17 @@
 
 
 // reg x
-const qtyRegx = 
+const qtyRegx = /^[0-9]+$/;
+const cash = /^[0-9]+$/;
+const discount = /^[0-9]*$/;
+const balance = /^[0-9]+$/;
+
 
 
 //   -------------
-
-
+if(orderDB.length == 0){
+  $('#orderID').val("O00-1");
+}
 //desavle buttons
 //$('#btnAdd').attr('disabled',true);
 
@@ -130,14 +135,16 @@ const qtyRegx =
 
 
    
-  
+  function order(){
+    // add order to orderDB
+    var order = new OrderDTO($('#OrderId').val(),$('#OrderDate').val(),$('#txtCustomerIDForOrder').val());
+    orderDB.push(order);
+  }
 
 
    function addToArrayDB(itemTotal,qtyOnHand){
 
-         // add order to orderDB
-          var order = new OrderDTO($('#OrderId').val(),$('#OrderDate').val(),$('#txtCustomerIDForOrder').val());
-          orderDB.push(order);
+         
 
          //  add orderDetail To orderDetailDB
          
@@ -173,6 +180,41 @@ const qtyRegx =
     }
 
    }
+
+
+
+
+  //  purchaceOrde
+      $('#btnPurchase').on('click',function(){
+           order();
+           generateNewOrderID();
+           console.log("Press purchace",$('#txtCash').val(), $('#subTotal').text())
+            if( $('#subTotal').text() < $('#txtCash').val()){
+              console.log(" sub not  same")
+              var bal = ($('#txtCash').val() -   $('#subTotal').text()) - $('#txtDiscount').val();
+              $('#total').text(bal);
+              $('#txtBalance').val(bal);
+
+            }else if( $('#subTotal').text() ==  $('#txtCash').val()){
+               var balance = $('#txtCash').val() -  $('#txtDiscount').val();
+               console.log(" sub same")
+               $('#total').text(balance);
+               $('#txtBalance').val(balance);
+            }
+
+                      
+          });
+   
+ 
+      
+          function generateNewOrderID(){
+               //O00-1
+                   
+                  console.log(orderDB[orderDB.length-1].orderID)
+               var   orderDB[orderDB.length-1].orderID
+                  
+              
+          }
 
 
 
