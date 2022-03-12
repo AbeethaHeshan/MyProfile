@@ -149,6 +149,7 @@
                 <div class="container  position-relative  justify-content-center " style="width:95vw;height: 75vh;top: 100px;margin:auto;">
 
                   <div class="row">
+                     
                     <!-- invoive details -->
                     <div class="card m-2 col">
                       <div class=card-header style="background-color: #72153c;color: white;text-align: center;border-radius:0 0 10px 10px;">Invoice Details</div>
@@ -158,38 +159,37 @@
 
                             <div class="col-md-6">
                               <label for="inputOrderID" class="form-label">OrderID</label>
-                              <input type="text" class="form-control" id="OredrID">
+                              <input type="text" class="form-control" id="orderID">
                             </div>
 
                             <div class="col-md-6">
                               <label for="Date" class="form-label">Date</label>
-                              <input type="date" class="form-control" id="inputPassword4">
+                              <input type="date" class="form-control" id="orderDate">
                             </div>
 
                             <div class="col-md-6">
                               <label for="inputState" class="form-label">Customer</label>
-                              <select id="inputState" class="form-select">
-                                <option selected>Choose...</option>
-                                <option>...</option>
+                              <select id="customerIDForOrder" class="form-select">
+                                <option selected> ---select---</option>
                               </select>
                             </div>
                               
 
                           <div class="col-md-6">
                             <label for="inputAddress2" class="form-label">Customer ID</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            <input type="text" class="form-control" id="txtCustomerIDForOrder" placeholder="customerID">
                           </div>
 
 
                           <div class="col-md-12">
                             <label for="inputCity" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="inputCity">
+                            <input type="text" class="form-control" id="txtCustomerNameForOrder">
                           </div>
 
                           
                           <div class="col-md-12">
                             <label for="inputZip" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="inputZip">
+                            <input type="text" class="form-control" id="txtAddressForOrder">
                           </div>
 
 
@@ -210,43 +210,43 @@
                             
                       <div class="col-md-6">
                         <label for="inputState" class="form-label">Item</label>
-                        <select id="inputState" class="form-select">
-                          <option selected>Choose...</option>
-                          <option>...</option>
+                        <select id="itemIDForOrder" class="form-select">
+                          <option selected>---select---</option>
+                
                         </select>
                       </div>
 
                       <div class="col-md-6">
                         <label for="inputAddress2" class="form-label">Item Code</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                        <input type="text" class="form-control" id="txtItemIDForOrder" placeholder=" ">
                       </div>
 
 
                       <div class="col-md-6">
                         <label for="inputAddress2" class="form-label">Item Name</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                        <input type="text" class="form-control" id="txtItemNameForOrder" placeholder=" ">
                       </div>
 
                       <div class="col-md-6">
                         <label for="inputAddress2" class="form-label">Price</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                        <input type="text" class="form-control" id="txtItemPriceForOrder" placeholder=" ">
                       </div>
 
                       <div class="col-md-6">
                         <label for="inputAddress2" class="form-label">Qty On Hand</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                        <input type="text" class="form-control" id="txtItemQtyOnHandForOrder" placeholder=" ">
                       </div>
 
                       <div class="col-md-6">
                         <label for="inputAddress2" class="form-label">Item Qty</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                        <input type="text" class="form-control" id="txtItemQtyForOrder" placeholder="00">
                       </div>
 
 
 
 
                       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                          <button class="btn btn-primary" type="button">Add</button>
+                          <button class="btn btn-primary" type="button" id="btnAdd">Add</button>
                       </div>
                          </form>
                           
@@ -262,7 +262,7 @@
                             <label for="inputPassword6" class="col-form-label">Total : </label>
                           </div>
                           <div class="col">
-                            <label for="inputPassword6" class="col-form-label">0000</label>
+                            <label for="inputPassword6" class="col-form-label" id="total">0000</label>
                           </div>
                         </div>
 
@@ -271,31 +271,31 @@
                             <label for="inputPassword6" class="col-form-label">Sub Total : </label>
                           </div>
                           <div class="col">
-                            <label for="inputPassword6" class="col-form-label">0000</label>
+                            <label for="inputPassword6" class="col-form-label" id="subTotal">0000</label>
                           </div>
                         </div>
 
                         <div class="row " style="position: relative;top: 80px;">
                           <div class="col-md-6">
                             <label for="inputAddress2" class="form-label" style="position:relative;top:10px;"><b>Cash</b></label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            <input type="text" class="form-control" id="txtCash" placeholder=" ">
                           </div>
     
                           <div class="col-md-6">
                             <label for="inputAddress2" class="form-label" style="position:relative;top:10px;"><b>Discount</b></label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            <input type="text" class="form-control" id="txtDiscount" placeholder=" ">
                           </div>
     
                           <div class="col-md-12">
                             <label for="inputAddress2" class="form-label" style="position:relative;top:10px;"><b>Balance</b></label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            <input type="text" class="form-control" id="txtBalance" placeholder=" ">
                           </div>
                         </div>
 
 
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end"style="position:relative;top:105px;" >
                          
-                          <button class="btn btn-primary" type="button">Purchase</button>
+                          <button class="btn btn-primary" type="button" id="btnPurchase">Purchase</button>
                         </div>
 
 
@@ -304,6 +304,22 @@
                     </div>
 
                 </div>
+
+                <table class="table position-relative">
+                  <thead>
+                      <tr  style="background-color: rgb(67, 113, 182); color: rgb(255, 255, 255);text-align: center;" >
+                      <th scope="col">Item Code</th>
+                      <th scope="col"> Item Name</th>
+                      <th scope="col">price</th>
+                      <th scope="col">Quntity</th>
+                      <th scope="col">Total</th>
+                     
+                    </tr>
+                  </thead>
+                  <tbody id="OrderTable">
+                 
+                  </tbody>
+                </table>
 
               </div>            
                            
@@ -633,9 +649,13 @@
            
            <script src="controllers/CustomerContraller.js"></script>
            <script src="controllers/ItemController.js"></script>
+           <script src="controllers/OrderController.js"></script>
+           
            <script src="db/db.js"></script>
            <script src="model/Customer.js"></script>
            <script src="model/Item.js"></script>
+           <script src="model/Order.js"></script>
+           <script src="model/OrderDetails.js"></script>
            <script src="asserts/Bootstrap/js/bootstrap.min.js"></script>
     
      </body>

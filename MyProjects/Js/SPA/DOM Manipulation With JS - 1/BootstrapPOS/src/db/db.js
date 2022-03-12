@@ -6,5 +6,13 @@ var customerDB = new Array();
 var itemDB = new Array();
 
 
+//order
+var orderDB = new Array();
+
+
+//order details
+var orderDetailsDB = new Array();
+
+
 
 

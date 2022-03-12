@@ -330,6 +330,7 @@
                        
                         saveCustomer();  
                         loadCustomerToTable();
+                        setAllCustomersForOrder();
                         clearTextBoxes();
 
                    }
@@ -339,6 +340,7 @@
                });
                   
 
+              
               
 
 

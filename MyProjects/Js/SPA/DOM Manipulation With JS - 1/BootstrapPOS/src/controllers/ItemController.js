@@ -293,6 +293,7 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
                    
                     itemDB.push(collectItemData())
                     loadItemTable();
+                    setAllItemForOrder();
                     clearItemtxtBoxes();
                 }
 
