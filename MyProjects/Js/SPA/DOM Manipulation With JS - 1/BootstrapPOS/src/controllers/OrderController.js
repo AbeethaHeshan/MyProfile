@@ -2,7 +2,7 @@
 
 
 // reg x
-
+const qtyRegx = 
 
 
 //   -------------
