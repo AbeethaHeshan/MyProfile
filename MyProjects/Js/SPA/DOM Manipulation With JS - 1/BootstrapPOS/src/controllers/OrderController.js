@@ -137,7 +137,7 @@ if(orderDB.length == 0){
    
   function order(){
     // add order to orderDB
-    var order = new OrderDTO($('#OrderId').val(),$('#OrderDate').val(),$('#txtCustomerIDForOrder').val());
+    var order = new OrderDTO($('#orderID').val(),$('#orderDate').val(),$('#txtCustomerIDForOrder').val());
     orderDB.push(order);
   }
 
@@ -194,12 +194,16 @@ if(orderDB.length == 0){
               var bal = ($('#txtCash').val() -   $('#subTotal').text()) - $('#txtDiscount').val();
               $('#total').text(bal);
               $('#txtBalance').val(bal);
+              $('#OrderTable').empty();
+              subTotal = 0;
 
             }else if( $('#subTotal').text() ==  $('#txtCash').val()){
                var balance = $('#txtCash').val() -  $('#txtDiscount').val();
                console.log(" sub same")
                $('#total').text(balance);
                $('#txtBalance').val(balance);
+               $('#OrderTable').empty();
+               subTotal = 0;
             }
 
                       
@@ -210,8 +214,14 @@ if(orderDB.length == 0){
           function generateNewOrderID(){
                //O00-1
                    
-                  console.log(orderDB[orderDB.length-1].orderID)
-              
+                console.log(orderDB[orderDB.length-1].orderID , " oID")
+                 if(orderDB.length != 0){
+                 
+                   var str =  orderDB[orderDB.length-1].orderID ;
+                   var id = 1 + parseInt((str.substr(4)));
+                   var orderId = 'O00-' + id;
+                   $('#orderID').val(orderId);
+                }
                   
               
           }
