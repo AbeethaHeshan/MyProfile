@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queue</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 95vh;
+      }
+      body > section {
+        position: relative;
+        width: 700px;
+        height: 200px;
+      }
+      body > section > div {
+        width: 100px;
+        height: 50px;
+
+        border-radius: 5px;
+      }
+      #boxOne {
+        background-color: rgb(228, 0, 0);
+      }
+      #boxTwo {
+        background-color: rgb(84, 141, 31);
+      }
+      #boxThree {
+        background-color: rgb(28, 46, 209);
+      }
+      #boxFour {
+        background-color: rgb(255, 252, 62);
+      }
+      #boxFive {
+        background-color: rgb(255, 176, 248);
+      }
+
+      #boxSix {
+        background-color: rgb(238, 99, 226);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+      }
+  
+
+      #Middle_Boxes {
+        display: grid;
+
+        justify-content: center;
+        align-items: center;
+
+        grid-auto-flow: column;
+        gap: 10px;
+
+        width: 500px;
+        height: 55px;
+        margin: auto;
+      }
+
+      #Middle_Boxes > div {
+        width: 100px;
+        height: 50px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div id="boxOne"></div>
+      <hr />
+      <div id="Middle_Boxes">
+        <div id="boxTwo"></div>
+        <div id="boxThree"></div>
+        <div id="boxFour"></div>
+        <div id="boxFive"></div>
+      </div>
+      <hr />
+
+      <div id="boxSix"></div>
+    </section>
+
+    <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+    <script>
+
+
+      let i = 0;
+
+      var data_1 = {
+        box: "#boxOne",
+        colour: "red",
+      };
+
+      var data_2 = {
+        box: "#boxTwo",
+        colour: "green",
+      };
+
+      var data_3 = {
+        box: "#boxThree",
+        colour: "blue",
+      };
+
+      var data_4 = {
+        box: "#boxFour",
+        colour: "yellow",
+      };
+
+      var data_5 = {
+        box: "#boxFive",
+        colour: "rgb(255, 176, 248)",
+      };
+
+      var data_6 = {
+        box: "#boxSix",
+        colour: "rgb(238, 99, 226)",
+      };
+
+
+      var queue = [
+        data_1,
+        data_2,
+        data_3,
+        data_4,
+        data_5,
+        data_6
+    ];
+
+
+     
+
+    setInterval(printQueue, 1000);
+    
+      function printQueue() {
+    
+              
+            var tempArray = new Array();
+            tempArray[0] = queue[queue.length-1].colour;
+           
+            for(var x = 0 ; x< queue.length; x++){
+                  tempArray[x+1] = queue[x].colour;
+                 
+            }
+
+            for(var j = 0 ; j<= queue.length-1 ; j++){
+                   queue[j].colour = tempArray[j];  
+            }
+            
+            for(var i = 0 ; i <= queue.length-1 ; i++){
+                $(queue[i].box).css("background", tempArray[i]);
+            }
+            
+      
+      }
+    </script>
+  </body>
+</html>

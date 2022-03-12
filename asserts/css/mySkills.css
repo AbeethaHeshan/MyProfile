@@ -7,43 +7,114 @@
 
 .skill > .skill-set {
     position: relative;
-    height: 500px;
-    top: 110px;
-
-    display: flex;
-    flex-wrap: wrap;
+    height: 200px;
+    top:150px;
+    display: grid;
+    grid-template-columns: repeat(8,150px);
+    gap: 10px;
+    grid-auto-flow: column;
+    align-content: center;
+    justify-content: center;
+   
 }
 
-.skill > .skill-set > div {
+
+
+/* Arrows */
+
+.skill-set > #skillnavArrowLeft > div{
+       position: relative;
+       width: 100px;
+       height: 100px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       top: 10px;
+
+}
+
+
+  /* left */
+   /* top */
+.skill-set > #skillnavArrowLeft > div > :first-child{
+
+       position: absolute;
+       width: 50px;
+       height:10px;
+       border: 2px solid red;
+       transform: rotate(-45deg);
+       top: 26px;
+       border-radius: 0 10px 10px 0;
+            
+}
+ /* bottom */
+.skill-set > #skillnavArrowLeft > div > :last-child{
+    position: absolute;
+    width: 50px;
+    height:10px;
+    border: 2px solid red;
+    transform: rotate(45deg);
+    top: 55px;
+    border-radius: 0 10px 10px 0;
+         
+}
+
+
+/* right */
+
+
+.skill-set > #skillnavArrowRight > div{
     position: relative;
-    flex-grow: 1;
- /*   border: 2px solid #2a1342;*/
-    width: 400px;
-    height: 230px;
+    
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 47px;
+    top: 10px;
+
+}
+
+
+
+
+.skill-set > #skillnavArrowRight > div > :first-child{
+    position: absolute;
+    width: 50px;
+    height:10px;
+    border: 2px solid red;
+    transform: rotate(45deg);
+    top: 26px;
+    border-radius: 10px 0 0 10px ;
+         
+}
+.skill-set > #skillnavArrowRight> div > :last-child{
+ position: absolute;
+ width: 50px;
+ height:10px;
+ border: 2px solid red;
+ transform: rotate(-45deg);
+ top: 55px;
+ border-radius: 10px 0 0 10px ;
 }
 
 
 /*circles*/
-.skill-set > div > div:nth-child(1) {
-    /* position: relative;
-     border-radius: 100%;
-     border: 10px solid blue;
-     width: 150px;
-     height: 150px;
-     top: 38px;
-     left: 17px;*/
-
+.skill-set > div:not(:first-child):not(:last-child)> div:nth-child(1) {
 
     width: 100px;
     height: 100px;
-    top: 38px;
+    top: 0px;
     left: 17px;
     border-radius: 100%;
     transform: rotate(45deg);
     position: relative;
+
+
 }
 
-.skill-set > div > div:nth-child(1)::after {
+.skill-set > div:not(:first-child):not(:last-child) > div:nth-child(1)::after {
     content: "";
     border-radius: 100%;
     position: absolute;
@@ -117,26 +188,11 @@
     background: #DDA485;
 }
 
-.skill-set > div > div:nth-child(1)>h3{
-    position: absolute;
-    color: #ffffff;
-    transform: rotate(-45deg);
-    font-size:28px;
-    top:-8px;
-    left:10px;
-    right: 0;
-    bottom: 0;
-    width: max-content;
-    height: max-content;
-    margin: auto;
-    z-index: 2;
-}
-
-
+/*
 /*divs*/
-.skill-set > div > div:nth-child(2){
+ /* .skill-set > div > div:nth-child(2){
     position: absolute;
-   /* border: 2px solid black;*/
+   
     width: 241px;
     height: 158px;
     left: 124px;
@@ -145,65 +201,7 @@
     margin: auto;
     border-top-left-radius: 51px;
     border-bottom-right-radius: 40px;
-}
-.skill-set > div > div:nth-child(2)>div{
-    position: absolute;
-   /* border: 2px solid #ba1818;*/
-    background: rgba(194, 203, 203, 0.48);
-    width: 239px;
-    height: 40px;
-    left: -2px;
-    right: 0;
-    top: 0;
-    margin: auto;
-    border-top-left-radius: 58px;
-}
-.skill-set > div > div:nth-child(2)>div>img{
-    position: absolute;
-    top: 3px;
-    left: 27px;
-    margin: auto;
-    height: 35px;
-}
-.skill-set > div > div:nth-child(2)>div>h3 {
-    position: absolute;
-    top:0;
-    left:0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    height:20px;
-    width: max-content;
-
-    font-size:20px;
-    color: #120c3b;
-}
-/*hedder text*/
- #txt1{
-    color: #CF21B3;
- }
- #txt2{
-    color: #DD7021 ;
- }
- #txt3{
-   color: #2D7AA6;
- }
- #txt4{
-   color:#CFC821 ;
- }
- #txt5{
-   color:#859E3D ;
- }
- #txt6{
-   color: #FFAC70;
- }
-
-
-.skill-set > div > div:nth-child(2){
-      /* background: rgba(117, 161, 182, 0.51);*/
-       box-shadow: 4px 6px 7px 1px #60a6cbb9;
-}
-
+}  */
 
 /* MAin text */
 .skill >h2:nth-child(1){
@@ -220,7 +218,109 @@
 }
 
 
-                                              /*Responsive*/
+.skill-set{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.skill-set > div:not(:first-child):not(:last-child)> div:nth-child(1)>div {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    
+    transform: rotate(-45deg);
+    z-index: 1;
+    top:15px;
+    left:16px;
+    
+}
+
+
+
+
+ #p1 {
+   
+    background: url("/asserts/images/SectionThree/icons/Java.png");
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+  
+}
+
+#p2 {
+    background: url("../images/SectionThree/icons/html.png");
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+
+   
+}
+
+#p3 {
+    background: url("../images/SectionThree/icons/css3.png");
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+
+   
+}
+
+#p4 {
+    background: url("../images/SectionThree/icons/java-script.png");
+     background-size: 70px 70px;
+     background-repeat: no-repeat;
+
+}
+
+#p5 {
+
+}
+
+#p6{
+    background: url("../images/SectionThree/icons/mysql.png");
+    background-size: 70px 70px;
+    background-repeat: no-repeat;  
+}
+
+
+
+/* skill end*/
+
+/*technologies*/
+
+#technologies {
+      position: relative;
+      border: 2px solid red;
+      top:215px;
+      height: 100px;
+    
+}
+
+#containor{
+     position:absolute;
+     display: grid;
+     grid-template-columns: repeat(10,150px);
+     height: 100px;
+     gap: 10px;
+     justify-content: center;
+     border: 2px solid red;
+     
+}
+
+
+
+
+
+
+
+
+
+
+  
+
+/*Responsive*/
+
+/*
 
 @media all and (max-width: 320px) {
 
@@ -236,7 +336,7 @@
         height: 400px;
         width:300px;
         position: relative;
-        /*  border: 2px solid #040610;*/
+     
         display:grid;
         grid-template-columns: repeat(2,100px);
         grid-template-rows: repeat(3,100px);
@@ -249,8 +349,7 @@
     }
     .skill > .skill-set > div {
         position: relative;
-        /* border: 2px solid #179c4d;*/
-        /* background: #E51500;*/
+      
         width:100px;
         height:100px;
         left: 20px;
@@ -275,7 +374,7 @@
     #one{
         background: url("../images/SectionThree/icons eztra/Java.png")
         no-repeat center  ;
-        background-size: 80px 80px;
+       ;
 
     }
 
@@ -322,7 +421,7 @@
         height: 400px;
         width:300px;
         position: relative;
-      /*  border: 2px solid #040610;*/
+     
         display:grid;
         grid-template-columns: repeat(2,100px);
         grid-template-rows: repeat(3,100px);
@@ -403,7 +502,7 @@
 
     .skill > .skill-set {
         position: relative;
-        /* border: 2px solid red;*/
+      
         height: 520px;
         width: max-content;
         display: grid;
@@ -511,7 +610,7 @@
 @media all and (min-device-width: 620px) and (max-device-width: 768px) {
     .skill > .skill-set {
         position: relative;
-        /* border: 2px solid red;*/
+    
         height: 520px;
         width: max-content;
         display: grid;
@@ -529,16 +628,6 @@
     }
 
 
-    .skill-set > div > div:nth-child(1) {
-        width: 45px;
-        height: 45px;
-        top: -29px;
-        left: 63px;
-        border-radius: 100%;
-        transform: rotate(45deg);
-        position: relative;
-
-    }
 
     .skill > .skill-set > div {
         position: relative;
@@ -606,18 +695,12 @@
 
 
 
-    .skill-set>div>div:nth-child(2){
-        display: none;
-    }
-
-
-
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
-    /*main container*/
+   
     .skill > .skill-set {
-       /* border: 2px solid red;*/
+     
         position: relative;
         height: 500px;
         top: 110px;
@@ -625,17 +708,17 @@
         flex-wrap: wrap;
     }
 
-    /*boxes*/
+  
     .skill > .skill-set > div {
         position: relative;
         flex-grow: 1;
         flex-basis: auto;
-     /*   border: 2px solid #2a1342;*/
+    
         width:250px;
         height: 220px;
     }
 
-    /*circles*/
+   
     .skill-set > div > div:nth-child(1) {
 
         width: 60px;
@@ -648,10 +731,10 @@
         z-index: 2;
     }
 
-    /*divs*/
+    
     .skill-set > div > div:nth-child(2){
         position: absolute;
-       /* border: 2px solid black;*/
+      
         width: 200px;
         height: 150px;
         left:-3px;
@@ -661,12 +744,12 @@
         border-top-left-radius: 51px;
         border-bottom-right-radius: 40px;
     }
-    /* div image visible false*/
+    
     .skill-set > div > div:nth-child(2)>div>img{
         display: none;
     }
 
-     /*add picture*/
+     
 
     .skill > .skill-set > div > div:nth-child(1) > h3{
         color: transparent;
@@ -711,7 +794,7 @@
 
 
 
-  /* circle after:: */
+ 
     #one > #circle-1::after {
         background: #eaaaa3;
     }
@@ -757,7 +840,7 @@
 }
 
 @media all and (min-width: 1024px){
-    /*circles*/
+   
     .skill-set > div > div:nth-child(1) {
 
         width: 100px;
@@ -770,10 +853,10 @@
         z-index: 2;
     }
 
-    /*divs*/
+
     .skill-set > div > div:nth-child(2){
         position: absolute;
-        /* border: 2px solid black; */
+ 
         width: 241px;
         height: 158px;
         left: -18px;
@@ -785,7 +868,7 @@
     }
 
 
-    /*add picture*/
+
 
     .skill > .skill-set > div > div:nth-child(1) > h3{
         color: transparent;
@@ -830,5 +913,6 @@
 
 
 }
+*/
 
 

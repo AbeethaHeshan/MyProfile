@@ -85,13 +85,13 @@
 
     /*image blob*/
     .div-four {
-        position: relative;
+        position: absolute;
         width: 300px;
         height: 300px;
         top: 0;
-        bottom: 0;
-        left: 224px;
-        right: 0;
+        bottom: 74px;
+        right: 300px;;
+        left: auto;
         margin: auto;
 
 
