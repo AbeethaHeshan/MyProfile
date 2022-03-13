@@ -14,5 +14,7 @@ var orderDB = new Array();
 var orderDetailsDB = new Array();
 
 
+//id
+var idArr = new Array();
 
 

@@ -7,11 +7,63 @@ const cash = /^[0-9]+$/;
 const discount = /^[0-9]*$/;
 const balance = /^[0-9]+$/;
 
+  $('#btnAdd').prop('disabled',true);
+  $('#btnPurchase').prop('disabled',true);
+
+   
+  $('#txtItemIDForOrder').prop('disabled',true);
+  $('#txtItemNameForOrder').prop('disabled',true);
+  $('#txtItemPriceForOrder').prop('disabled',true);
+  $('#txtItemQtyOnHandForOrder').prop('disabled',true);
+
+$("#txtItemQtyForOrder").keyup(function(event){
+        if(qtyRegx.test($("#txtItemQtyForOrder").val())){
+      
+          if( parseInt($("#txtItemQtyForOrder").val()) > parseInt($("#txtItemQtyOnHandForOrder").val())){
+            $("#txtItemQtyForOrder").css('border-color','red');
+            $('#btnAdd').prop('disabled',true);  
+            $('#btnPurchase').prop('disabled',true);
+          }else if(parseInt($("#txtItemQtyForOrder").val()) <= parseInt($("#txtItemQtyOnHandForOrder").val()) ){
+            $("#txtItemQtyForOrder").css('border-color','green');
+            $('#btnAdd').prop('disabled',false);  
+            $('#btnPurchase').prop('disabled',false);
+          }
+        }else{
+          $("#txtItemQtyForOrder").css('border-color','red');
+          $('#btnAdd').prop('disabled',true); 
+          $('#btnPurchase').prop('disabled',true);
+        }
+});
+
+
+$('#txtCash').keyup(function(){
+      console.log(parseInt( $('#txtCash').val()) >= parseInt($('#subTotal').text()))
+    if(parseInt( $('#txtCash').val()) >= parseInt($('#subTotal').val())){
+      if(cash.test($('#txtCash').val())){
+        $('#txtCash').css('border-color','green');
+        $('#btnPurchase').prop('disabled',false);
+       }
+       else{
+        $('#txtCash').css('border-color','red');
+        $('#btnPurchase').prop('disabled',true);
+       }
+    }
+    
+})
+
+
+
+
+
+
 
 
 //   -------------
-if(orderDB.length == 0){
-  $('#orderID').val("O00-1");
+if(idArr.length == 0){
+     $('#orderID').val("O00-1");
+  
+
+  idArr.push("O00-1");
 }
 //desavle buttons
 //$('#btnAdd').attr('disabled',true);
@@ -148,7 +200,7 @@ if(orderDB.length == 0){
 
          //  add orderDetail To orderDetailDB
          
-          var orderDetail = new OrderDetailsDTO($('#txtItemIDForOrder').val(), $('#txtItemNameForOrder').val(), $('#txtItemPriceForOrder').val(),$('#txtItemQtyOnHandForOrder').val(),$('#txtItemQtyForOrder').val(),itemTotal)
+          var orderDetail = new OrderDetailsDTO($('#txtItemIDForOrder').val(), $('#txtItemNameForOrder').val(), $('#txtItemPriceForOrder').val(),$('#txtItemQtyOnHandForOrder').val(),$('#txtItemQtyForOrder').val(),itemTotal,$('#orderID').val())
           orderDetailsDB.push(orderDetail);
 
          // update current Qunitiy on hand
@@ -186,16 +238,20 @@ if(orderDB.length == 0){
 
   //  purchaceOrde
       $('#btnPurchase').on('click',function(){
+          
            order();
-           generateNewOrderID();
+           var arrFor = new Array();
            console.log("Press purchace",$('#txtCash').val(), $('#subTotal').text())
             if( $('#subTotal').text() < $('#txtCash').val()){
               console.log(" sub not  same")
-              var bal = ($('#txtCash').val() -   $('#subTotal').text()) - $('#txtDiscount').val();
-              $('#total').text(bal);
+              var bal = ($('#txtCash').val()  -   $('#subTotal').text()) - $('#txtDiscount').val();
+                
+              $('#total').text($('#subTotal').text() - $('#txtDiscount').val());
               $('#txtBalance').val(bal);
               $('#OrderTable').empty();
+              orderDetailsDB.length = 0;
               subTotal = 0;
+              generateNewOrderID();
 
             }else if( $('#subTotal').text() ==  $('#txtCash').val()){
                var balance = $('#txtCash').val() -  $('#txtDiscount').val();
@@ -203,24 +259,29 @@ if(orderDB.length == 0){
                $('#total').text(balance);
                $('#txtBalance').val(balance);
                $('#OrderTable').empty();
-               subTotal = 0;
-            }
-
-                      
+                 orderDetailsDB.length = 0;
+                 subTotal = 0;
+                 generateNewOrderID();
+            }             
           });
    
  
-      
           function generateNewOrderID(){
                //O00-1
-                   
-                console.log(orderDB[orderDB.length-1].orderID , " oID")
-                 if(orderDB.length != 0){
+                
+                console.log(orderDB[orderDB.length-1].orderID , " oID ")
+                console.log(idArr[idArr.length], " o I D  ")
+
+
+                 if(idArr.length != 0){
                  
-                   var str =  orderDB[orderDB.length-1].orderID ;
+                   var str =  idArr[idArr.length-1];
                    var id = 1 + parseInt((str.substr(4)));
                    var orderId = 'O00-' + id;
                    $('#orderID').val(orderId);
+                   idArr.push(orderId);
+                   
+                   
                 }
                   
               

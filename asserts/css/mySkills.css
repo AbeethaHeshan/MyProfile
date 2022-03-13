@@ -8,7 +8,7 @@
 .skill > .skill-set {
     position: relative;
     height: 200px;
-    top:150px;
+    top:276px;
     display: grid;
     grid-template-columns: repeat(8,150px);
     gap: 10px;
@@ -288,9 +288,9 @@
 
 /*technologies*/
 
-#technologies {
+/* #technologies {
       position: relative;
-      border: 2px solid red;
+      border: 2px solid rgb(255, 255, 255);
       top:215px;
       height: 100px;
     
@@ -303,9 +303,9 @@
      height: 100px;
      gap: 10px;
      justify-content: center;
-     border: 2px solid red;
+     border: 2px solid rgb(255, 255, 255);
      
-}
+} */
 
 
 
