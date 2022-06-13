@@ -1,0 +1,17 @@
+  <!-- login details  
+                                       <div class="d-flex justify-content-center">
+                                        <img src="asserts/images/navBar/BarandIcon.png" width="40px" height="40px" class="d-inline-block align-top" alt=""> 
+                                        <div class="position-relative">
+                                           <p  style="font-family:'Aladin',cursive ;font-size: 20px ;top:2px;left:-24px;" class="m-0 p-0 text-info position-relative ">The Kade</p>
+                                           <p style="color: #3179C6 ; font-family:'Audiowide',cursive; bottom: 9px;" class="m-0 p-0 position-relative fs-6">POS System</p>
+                                        </div> 
+                                      </div>
+
+                                      <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Email address</label>
+                                      </div>
+                                      <div class="form-floating">
+                                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                        <label for="floatingPassword">Password</label>
+                                      </div>  -->

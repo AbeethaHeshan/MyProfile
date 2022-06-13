@@ -1,0 +1,29 @@
+CREATE TABLE IF NOT EXISTS Customer(
+                CustomerID VARCHAR(8) NOT NULL,
+                Name VARCHAR(30),
+                Address Varchar(30),
+                Nic Varchar(12),
+                Tel Varchar(12)
+                Constraint Primary Key(customerID));
+
+CREATE TABLE IF NOT EXISTS Item(
+                 ItemID VARCHAR(8) NOT NULL,
+                 Description VARCHAR(30),
+                 Quantity Varchar(30),
+                 Price DOUBLE(12),
+                 Constraint Primary Key(ItemID));
+
+CREATE TABLE IF NOT EXISTS Order(
+                 OrderID VARCHAR(8) NOT NULL,
+                 CustomerID VARCHAR(8) NOT NULL,
+                 OrderDate Date,
+                 Constraint Primary Key(OrderID),
+                 Constraint FOREIGN KEY(CustomerID) REFERENCES Customer(CustomerID) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE IF NOT EXISTS OrderDetail(
+                 OrderID VARCHAR(8) NOT NULL,
+                 ItemID VARCHAR(8) NOT NULL,
+                 Qty INT,
+                 Constraint Primary Key(OrderID),
+                 Constraint FOREIGN KEY(OrderID) REFERENCES Orders(OrderID) ON DELETE CASCADE ON UPDATE CASCADE,
+                 Constraint FOREIGN KEY(ItemID) REFERENCES Item(ItemID) ON DELETE CASCADE ON UPDATE CASCADE);

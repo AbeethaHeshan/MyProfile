@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/background.css" > 
+    <link rel="stylesheet" href="assets/css/gameWindow.css" >
+    <link rel="stylesheet" href="assets/css/mainCharactor.css" >
+</head>
+<style>
+     
+#mainGameWindow{
+    -webkit-animation:h 3s linear infinite;
+   }
+ 
+  
+
+    @-webkit-keyframes h{
+        0%{
+            -webkit-transform: translateX(-100px);
+        }
+    
+        100%{ 
+            -webkit-transform: translateX(-800px);    
+        }
+    }
+
+</style>
+
+<body style="position: fixed;height: 95vh;">
+    <!-- background -->
+    <section id="background">      
+                    <!-- main game window -->
+                    <div id="mainGameWindow">  
+                           <img src="assets/aa.jpg" alt="" height="500px" width="3000px  ">
+                    </div>
+                    <div id="mainCharactor">
+                        <img src="assets/mainCharactor/mainMan.png" id="mainMan"> 
+                        <img src="assets/mainCharactor/hand.png" id="hand">    
+                        <img src="assets/mainCharactor/tyre.png" id="tyre" width="23px">   
+                        <img src="assets/mainCharactor/fire.png" id="fire" height="25px">
+                        <img src="assets/mainCharactor/fire2.png" id="fire2" height="7px" >
+                    </div>    
+                    
+    </section>
+    <script src="assets/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        
+        var currentPosition =  parseInt($('#mainCharactor').css("top"));
+        console.log(currentPosition,"xxxxx")
+          $(document).off('keypress').on('keypress',function(e){
+            $('#mainCharactor').stop();      
+            // if space bar press
+            if(e.which == 32){
+                   // console.log(currentPosition,"77")
+                    $('#mainCharactor').animate({top : "300px"},"slow"); 
+                    console.log($('#mainCharactor').css("top"), "Key down");
+                    $('#fire').css("display","block")
+                    $('#fire2').css("display","block")     
+            }
+           
+          }); 
+
+
+           $(document).off('keyup').on('keyup',function(e){
+            $('#mainCharactor').stop(); 
+            // if space bar press
+            if(e.which == 32){
+                 $('#mainCharactor').animate({top : "500px"},"slow");
+                 $('#fire').css("display","None")
+                 $('#fire2').css("display","None")   
+            }
+            
+          });
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+#mainGameWindow{
+   
+    position: absolute;
+    width: 150vw;
+    height: 450px;
+    border: 2px solid red;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    margin: auto;
+   
+
+}

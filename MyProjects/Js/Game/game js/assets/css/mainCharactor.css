@@ -1,0 +1,50 @@
+#mainCharactor{
+      position:relative;
+      width: 100px;
+      height: 140px;
+      border: 2px solid rgb(160, 206, 54);
+      top: 800px;
+      left: 200px;
+}
+
+#hand{
+    position: absolute;
+    top: 80px;
+    right: 19px;
+    margin:auto;
+}
+
+#tyre{
+    position: absolute;
+    top: 113px;
+    right: 39px;
+    margin: auto;  
+   -webkit-animation:rotateTyre 2s linear infinite;
+    
+}
+#fire{
+    position: absolute;
+    top: 105px;
+    right: 68px;
+    margin: auto;
+    display: none;
+}
+
+#fire2{
+    position: absolute;
+    top: 120px;
+    right: 73px;
+    margin: auto;
+    display: none;
+}
+
+@-webkit-keyframes rotateTyre{
+       from{
+        -webkit-transform: rotate(0deg);
+       }
+       to{
+        -webkit-transform: rotate(360deg); 
+       }
+}
+
+
