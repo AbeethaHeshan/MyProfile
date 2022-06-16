@@ -177,169 +177,121 @@
         }
 
 
+         // load all customers
+         loadAllCustomers();
+         function   loadAllCustomers(){
+          $('#customerTable').empty();
+          console.log("Started")
+          $.ajax({
+              url:"http://localhost:8080/",
+              method: "GET",
+              success:function (resp) {
+                  console.log(resp);
+                  for (const i of resp.data) {
+                      loadToTableCustomer(i.id,i.name,i.address,i.nic)
+                  }
+              },
+              error:function (ob,state){
+                  console.log(ob,state)
+              }
+   
+          })
 
 
 
-          /* 
-           !   Save customer to the table
-        */
-        function loadCustomerToTable(){
-         
-           $("#customerTable").empty();
-          for (var i of customerDB) {
-            /*create a html row*/
-            let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.address}</td><td>${i.nic}</td><td>${i.tel}</td><td> <button class="delete">delete</button>  <button class="update">Update</button></td></tr>`;
-            /*select the table body and append the row */
-            $("#customerTable").append(row);
+          function loadToTableCustomer(id, name,address,nic,tel){
+                      /*create a html row*/
+                      let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.address}</td><td>${i.nic}</td><td>${i.tel}</td><td> <button class="delete">delete</button>  <button class="update">Update</button></td></tr>`;
+                      /*select the table body and append the row */
+                      $("#customerTable").append(row);
           }
+
+
+          // save customer
+          $("#btnSave").on('click',function(){
+                 
+            var dataObj = {
+             
+              id: $("#txtCustomerId").val(),
+              name: $("#txtCustomerName").val(),
+              address: $("#txtCustomerAddress").val(),
+              nic: $("#txtCustomerNic").val(),
+              tel: $("#txtCustomerTel").val()
+           }   
            
-           deleteCustomer();
+           ajax({
+              type:"POST",
+              url:"",
+              data:JSON.strinify(dataObj),
+              success:function (msg){
 
-           console.log("A")
-           updateCustomer();
-           console.log("B")
+                   loadAllCustomers();
 
-        }
+              }
+           })
+           
+           
 
 
-      
-        
-        /* 
-           !   delete customer in the table 
-        */
+         });
 
-        function deleteCustomer(){
-           // customer delete event
+
+         //delete customers
+         //delete customer in the table 
+         // customer delete event
           $('.delete').on('click', function() {
 
-            var selectedRow = $(this).parents('tr');
-            var custId = $('td:nth-child(1)', selectedRow).text();   
-            var custName = $('td:nth-child(2)', selectedRow).text();   
-            var custAddress = $('td:nth-child(3)', selectedRow).text();  
-            var custNic = $('td:nth-child(4)', selectedRow).text(); 
-            var custTel = $('td:nth-child(3)', selectedRow).text(); 
-            console.log(custId , custName , custAddress , custNic)
-            
+          var selectedRow = $(this).parents('tr');
+
             selectedRow.fadeOut('slow', function(){
-              
-               // refresh array
-                 var tempCustomerArray = new Array();
-                 
-                 for (var i in customerDB) {
-                   if(customerDB[i].id == custId){
-                       customerDB[i] = "";
-                       console.log(customerDB[i])
-                   }else{
-
-                    tempCustomerArray.push(new CustomerDTO(customerDB[i].id,customerDB[i].name,customerDB[i].address,customerDB[i].nic,customerDB[i].tel));
-                     
-                   }
-                   
-                 } 
-                 customerDB = tempCustomerArray;
-
-                 for(var i of customerDB){
-                      console.log(i.id," id")
-                 }
-
+             var custID =  $("#custID").val();
+                $.ajax({
+                  type: "DELETE",
+                  url: "http://localhost:8080/13_Model_Mapper_war_exploded/api/v1/customer?customerID="+custID,
+                  success: function (msg) {
+                      $('#tableContent2').empty();
+                      loadAllCustomers();
+                  },
+                  error:function (ob,msg) {
+                          alert(msg);
+                  }
+              });
+               loadAllCustomers();     
             });
           });
+        
+
+
+
+          // update customer
+          $('.update').on('click', function() {
+            var dataObj = {
+             
+              id: $("#txtCustomerId").val(),
+              name: $("#txtCustomerName").val(),
+              address: $("#txtCustomerAddress").val(),
+              nic: $("#txtCustomerNic").val(),
+              tel: $("#txtCustomerTel").val()
+              
+           }   
+           
+           ajax({
+              type:"PUT",
+              url:"",
+              data:JSON.strinify(dataObj),
+              success:function (msg){
+
+                   loadAllCustomers();
+
+              }
+           })
+
+          });
+
+
+
+
+
+
+
         }
-
-
-
-         /* 
-           !   update customer in the table 
-        */
-         var bool = false;
-         function updateCustomer(){
-         
-
-        // customer delete event
-        $('.update').on('click', function() {
-          
-       
-  
-                  var selectedRow = $(this).parents('tr');
-                  var custId = $('td:nth-child(1)', selectedRow).text();   
-                  var custName = $('td:nth-child(2)', selectedRow).text();   
-                  var custAddress = $('td:nth-child(3)', selectedRow).text();  
-                  var custNic = $('td:nth-child(4)', selectedRow).text(); 
-                  var custTel = $('td:nth-child(5)', selectedRow).text(); 
-                  console.log(custId , custName , custAddress , custNic , custTel);
-
-                  $('#AddCustomer').modal('show');
-                  $('.modal-title').text('Update Customer');
-                 
-                  $('#btnSave').prop('disabled',false);
-
-                 
-                  $("#txtCustomerId").val(custId);
-                  $("#txtCustomerName").val(custName);
-                  $("#txtCustomerAddress").val(custAddress);
-                  $("#txtCustomerNic").val(custNic);
-                  $("#txtCustomerTel").val(custTel);
-
-                   
-                  bool = true;
-                  
-            
-           });
-
-                
-                return bool;
-         }
-         
-          
-
-
-
-                  // customer save/update  event
-               $("#btnSave").on('click',function(){
-              
-                      if(updateCustomer() == true){
-                       
-                      for(var i = 0 ; i < customerDB.length ; i++){
-                          
-                          if(customerDB[i].id ==  $("#txtCustomerId").val()){
-                          
-                            customerDB[i].id = $("#txtCustomerId").val();
-                            customerDB[i].name = $("#txtCustomerName").val();
-                            customerDB[i].address = $("#txtCustomerAddress").val();
-                            customerDB[i].nic = $("#txtCustomerNic").val();
-                            customerDB[i].tel = $("#txtCustomerTel").val();
-                             
-                            loadCustomerToTable();
-                            clearTextBoxes();
-                          
-                    
-                          }
-                       }
-                            bool = false;
-                           
-                   }else{
-                       
-                        saveCustomer();  
-                        loadCustomerToTable();
-                        setAllCustomersForOrder();
-                        clearTextBoxes();
-
-                   }
-                     
-                     
-
-               });
-                  
-
-              
-              
-
-
-
-              
-
-
-  
-
-
-
