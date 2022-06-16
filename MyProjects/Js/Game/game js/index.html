@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/background.css" > 
     <link rel="stylesheet" href="assets/css/gameWindow.css" >
     <link rel="stylesheet" href="assets/css/mainCharactor.css" >
+    <link rel="stylesheet" href="assets/css/ReandomAstroids.css">
 </head>
 <style>
      
@@ -55,7 +56,7 @@
             // if space bar press
             if(e.which == 32){
                    // console.log(currentPosition,"77")
-                    $('#mainCharactor').animate({top : "300px"},"slow"); 
+                    $('#mainCharactor').animate({top : "100px"},"slow"); 
                     console.log($('#mainCharactor').css("top"), "Key down");
                     $('#fire').css("display","block")
                     $('#fire2').css("display","block")     
@@ -68,7 +69,7 @@
             $('#mainCharactor').stop(); 
             // if space bar press
             if(e.which == 32){
-                 $('#mainCharactor').animate({top : "500px"},"slow");
+                 $('#mainCharactor').animate({top : "388px"},"slow");
                  $('#fire').css("display","None")
                  $('#fire2').css("display","None")   
             }
