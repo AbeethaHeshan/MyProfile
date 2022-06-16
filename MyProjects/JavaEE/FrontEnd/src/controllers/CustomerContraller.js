@@ -147,39 +147,26 @@
 
 
         function clearTextBoxes(){
-          $('#btnSave').prop('disabled',true);
-          $("#txtCustomerId").val('');
-          $("#txtCustomerName").val('');
-          $("#txtCustomerAddress").val('');
-          $("#txtCustomerNic").val('');
-          $("#txtCustomerTel").val('')
-          $("#txtCustomerId").css('border-color','#42b5ed');
-          $("#txtCustomerName").css('border-color','#42b5ed');
-          $("#txtCustomerAddress").css('border-color','#42b5ed');
-          $("#txtCustomerNic").css('border-color','#42b5ed');
-          $("#txtCustomerTel").css('border-color','#42b5ed');
+            $('#btnSave').prop('disabled',true);
+            $("#txtCustomerId").val('');
+            $("#txtCustomerName").val('');
+            $("#txtCustomerAddress").val('');
+            $("#txtCustomerNic").val('');
+            $("#txtCustomerTel").val('')
+            $("#txtCustomerId").css('border-color','#42b5ed');
+            $("#txtCustomerName").css('border-color','#42b5ed');
+            $("#txtCustomerAddress").css('border-color','#42b5ed');
+            $("#txtCustomerNic").css('border-color','#42b5ed');
+            $("#txtCustomerTel").css('border-color','#42b5ed');
         }
 
 
 
-        // add Customer data to array 
-
-        function saveCustomer(){
-          const custId = $("#txtCustomerId").val();
-          const custName = $("#txtCustomerName").val();
-          const custAddress = $("#txtCustomerAddress").val();
-          const custNic = $("#txtCustomerNic").val();
-          const custTel = $("#txtCustomerTel").val();
-          
-          
-          var customerDTO = new CustomerDTO(custId,custName,custAddress,custNic,custTel);
-          customerDB.push(customerDTO);
-        }
 
 
          // load all customers
          loadAllCustomers();
-         function   loadAllCustomers(){
+         function loadAllCustomers(){
           $('#customerTable').empty();
           console.log("Started")
           $.ajax({
@@ -196,12 +183,13 @@
               }
    
           })
+        }
 
 
 
           function loadToTableCustomer(id, name,address,nic,tel){
                       /*create a html row*/
-                      let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.address}</td><td>${i.nic}</td><td>${i.tel}</td><td> <button class="delete">delete</button>  <button class="update">Update</button></td></tr>`;
+                      let row = `<tr><td>${id}</td><td>${name}</td><td>${address}</td><td>${nic}</td><td>${tel}</td><td> <button class="delete">delete</button>  <button class="update">Update</button></td></tr>`;
                       /*select the table body and append the row */
                       $("#customerTable").append(row);
           }
@@ -272,26 +260,24 @@
               address: $("#txtCustomerAddress").val(),
               nic: $("#txtCustomerNic").val(),
               tel: $("#txtCustomerTel").val()
-              
-           }   
+
+             }   
            
-           ajax({
-              type:"PUT",
-              url:"",
-              data:JSON.strinify(dataObj),
-              success:function (msg){
+                ajax({
+                    type:"PUT",
+                    url:"",
+                    data:JSON.strinify(dataObj),
+                    success:function (msg){
 
-                   loadAllCustomers();
+                        loadAllCustomers();
 
-              }
-           })
+                    }
+                })
 
           });
 
 
+   
 
 
 
-
-
-        }

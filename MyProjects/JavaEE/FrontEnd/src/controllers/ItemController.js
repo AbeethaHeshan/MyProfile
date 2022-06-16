@@ -114,6 +114,136 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
 
     //                                           end regx 
 
+   
+
+            //get items
+
+
+
+              loadAllItems();
+              function loadAllItems(){
+                  $('#itemTable').empty();
+                  console.log("Started")
+                  $.ajax({
+                      url:"http://localhost:8080/",
+                      method: "GET",
+                      success:function (resp) {
+                          console.log(resp);
+                          for (const i of resp.data) {
+                              loadToTableItem(i.id,i.description,i.qty,i.unitPrice)
+                          }
+                      },
+                      error:function (ob,state){
+                          console.log(ob,state)
+                      }
+
+                  })
+                }
+
+
+         function  loadToTableItem(id,description,qty,unitPrice){
+             $('#itemTable').empty();
+             // get data from Array and load to the table
+             // ToDo: create a  row and add to the table
+             var row = `<tr><td>${id}</td><td>${description}</td><td>${qty}</td><td>${unitPrice}</td><td><button class="deleteItem">delete</button>  <button class="updateItem">Update</button></td></tr>`;
+             $('#itemTable').append(row);
+         }
+
+
+
+          // save item
+            $('#btnSaveItem').on('click',function(){
+
+              var dataObj = {
+              
+                  id: $("#txtItemId").val(),
+                  description: $("#txtItemDescription").val(),
+                  qty: $("#txtItemQuntity").val(),
+                  unitPrice: $("#txtItemUnitPrice").val()
+
+  
+               }   
+
+                $.ajax({
+                    url:"",
+                    method:"",
+                    dataType:JSON.stringify(dataObj),
+                    success:function (msg){
+                           loadAllItems();
+                    }
+                });
+
+            });
+
+
+
+
+
+           // update Item
+           $('.updateItem').on('click',function(){
+                      
+            var dataObj = {
+              
+                  id: $("#txtItemId").val(),
+                  description: $("#txtItemDescription").val(),
+                  qty: $("#txtItemQuntity").val(),
+                  unitPrice: $("#txtItemUnitPrice").val()
+ 
+            } 
+                 
+                 
+
+
+
+                    $.ajax({
+                      url:"",
+                      method:"",
+                      dataType:JSON.stringify(dataObj),
+                      success:function (msg){
+                          loadAllItems();
+                      }
+
+                    });
+          });
+           
+
+
+
+
+
+
+
+           // delete Item
+          
+           $('.deleteItem').on('click',function(){
+              var id = $("#txtItemId").val();
+              var selectedRow = $(this).parents('tr');
+              var itemId =  $('td:nth-child(1)', selectedRow).text();
+              
+                // remove row and refresh ItemArray
+                selectedRow.fadeOut('slow',function(){
+                       $.ajax({
+                           url:"",
+                           method:"DELETE",
+                           data:"",
+                           success:function (msg){
+                               loadAllItems();
+                           }
+                       });
+                });
+              
+          });
+
+
+
+
+
+
+
+
+
+
+
 
     /*
      ! clear text boxes
@@ -129,176 +259,4 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
     }
 
 
-    /*
-      
-        ! get data in text boxes
-    
-    */
-        function collectItemData(){
-
-           const itemId = $("#txtItemId").val();
-           const itemDescription =  $("#txtItemDescription").val();
-           const itemQuntity = $("#txtItemQuntity").val();
-           const itemPrice = $("#txtItemUnitPrice").val();
-            
-           
-           return new ItemDTO(itemId,itemDescription,itemQuntity,itemPrice);;
-
-        }
-
-
-
-
-
-
-       /* 
-        *  manage Item table 
-       */
-        function loadItemTable(){
-            $('#itemTable').empty();
-              for(i of itemDB){
-                   // get data from Array and load to the table
-                   // ToDo: create a  row and add to the table
-                    var row = `<tr><td>${i.id}</td><td>${i.description}</td><td>${i.quentity}</td><td>${i.unitPrice}</td><td><button class="deleteItem">delete</button>  <button class="updateItem">Update</button></td></tr>`;
-                    $('#itemTable').append(row);
-              }
-
-              deleteItemRow();
-              updateItemDataRow();
-
-        }
-
-
-
-
-     /* 
-      
-       ! delete data in row
-
-     */
-      function deleteItemRow(){
-              console.log("A")
-        $('.deleteItem').on('click',function(){
-              console.log("B")
-             var selectedRow = $(this).parents('tr');
-             var itemId =  $('td:nth-child(1)', selectedRow).text();
-            
-             // remove row and refresh ItemArray
-             selectedRow.fadeOut('slow',function(){
-                   var tempItemDB = new Array();
-                     
-                   for(i in itemDB){
-                        if(itemDB[i].id == itemId ){
-                            
-                               itemDB[i] = "";
-                        }else{
-                             
-                            tempItemDB.push(new ItemDTO(itemDB[i].id,itemDB[i].description,itemDB[i].quentity,itemDB[i].unitPrice))
-                        }
-                   }
- 
-                   itemDB = tempItemDB;  
-
-             });
-                
-        });
-        
-                              
-      }
-
-     
-
-
-        /* 
-        
-        ! update data in row
-
-        */
-         let updatePressed = false;
-         var obj = 0;
-         function updateItemDataRow(){
-               
-              $('.updateItem').on('click',function(){
-
-
-                      
-
-                      $('#AddItem').attr('id','btnUpdateItemData');
-                      $('#btnUpdateItemData').modal('show');
-                      $('#LabelItem').text('Update Item');
-
-                       var Row = $(this).parents('tr');
-                       var itemId =  $('td:nth-child(1)', Row).text();
-                       var description = $('td:nth-child(2)', Row).text();
-                       var quntity = $('td:nth-child(3)', Row).text();
-                       var price = $('td:nth-child(4)', Row).text();
-                       
-                       updatePressed = true;
-
-                       $("#txtItemId").val(itemId);
-                       $("#txtItemDescription").val(description);
-                       $("#txtItemQuntity").val(quntity);
-                       $("#txtItemUnitPrice").val(price);
-                        
-                      
-
-                       $('#btnUpdateItemData').attr('id','AddItem');
- 
-                 });
-
-                
-
-                 return updatePressed;
-
-         }  
-
-
-
-    /* 
-      
-       ! Save/Update data to the Array and save data to Table
-
-     */
-      
-       $('#btnSaveItem').on('click',function(){
-                
-                    console.log('save button pressed')
-                   
-                       
-                //update data
-                if(updateItemDataRow()){
-                       console.log("yes")
-                      
-                        //update array
-
-                        for(i in itemDB){
-                            console.log($("#txtItemId").val(),"ASD")
-                            if(itemDB[i].id ==  $("#txtItemId").val()){
-
-                             
-                                     itemDB[i].id = $("#txtItemId").val();
-                                     itemDB[i].description = $("#txtItemDescription").val();
-                                     itemDB[i].quentity =  $("#txtItemQuntity").val();
-                                     itemDB[i].unitPrice =  $("#txtItemUnitPrice").val();
-                                     loadItemTable(); 
-                                     clearItemtxtBoxes();
-                            }
-                        }
-                          
-                       updatePressed = false;
-                    
-
-
-                }else{
-                   
-                    itemDB.push(collectItemData())
-                    loadItemTable();
-                    setAllItemForOrder();
-                    clearItemtxtBoxes();
-                }
-
-                    for(i of itemDB){
-                        console.log(i.id )
-                    }
-
-       });
+  
