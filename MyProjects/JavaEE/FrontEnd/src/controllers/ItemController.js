@@ -235,16 +235,6 @@ const itemRegxUnitPrice = /^[0-9]*(.)?[0-9]+$/;
           });
 
 
-
-
-
-
-
-
-
-
-
-
     /*
      ! clear text boxes
       */
